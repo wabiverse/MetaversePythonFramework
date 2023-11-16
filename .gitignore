@@ -1,0 +1,17 @@
+*.swo
+*.swp
+.envrc
+.vscode/
+build
+dist
+downloads
+install
+local
+support
+*.dist-info
+__pycache__
+tests/testbed/macOS
+tests/testbed/iOS
+*.log
+*.gz
+*.DS_Store
