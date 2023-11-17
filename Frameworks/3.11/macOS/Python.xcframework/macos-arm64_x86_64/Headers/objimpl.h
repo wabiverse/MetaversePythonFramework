@@ -203,13 +203,14 @@ PyAPI_FUNC(int) PyObject_GC_IsFinalized(PyObject *);
         }                                                               \
     } while (0)
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_OBJIMPL_H
 #  include "cpython/objimpl.h"
 #  undef Py_CPYTHON_OBJIMPL_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_OBJIMPL_H */

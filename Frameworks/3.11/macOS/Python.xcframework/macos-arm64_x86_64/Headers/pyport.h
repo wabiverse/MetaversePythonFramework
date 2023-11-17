@@ -269,12 +269,6 @@ typedef Py_ssize_t Py_ssize_clean_t;
 #define S_ISCHR(x) (((x) & S_IFMT) == S_IFCHR)
 #endif
 
-#ifdef __cplusplus
-/* Move this down here since some C++ #include's don't like to be included
-   inside an extern "C" */
-extern "C" {
-#endif
-
 
 /* Py_ARITHMETIC_RIGHT_SHIFT
  * C doesn't define whether a right-shift of a signed integer sign-extends
@@ -514,6 +508,13 @@ extern char * _getpty(int *, int, mode_t, int);
 #endif
 
 #include "exports.h"
+
+#ifdef __cplusplus
+/* (^ Python guys didn't move this section down far enough...)
+   Move this down here since some C++ #include's don't like to
+   be included inside an extern "C" */
+extern "C" {
+#endif
 
 /* only get special linkage if built as shared or platform is Cygwin */
 #if defined(Py_ENABLE_SHARED) || defined(__CYGWIN__)

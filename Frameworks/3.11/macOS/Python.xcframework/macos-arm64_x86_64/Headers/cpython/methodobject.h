@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // PyCFunctionObject structure
 
 typedef struct {
@@ -71,4 +75,8 @@ static inline PyTypeObject* PyCFunction_GET_CLASS(PyObject *func_obj) {
 }
 #if !defined(Py_LIMITED_API) || Py_LIMITED_API+0 < 0x030b0000
 #  define PyCFunction_GET_CLASS(func) PyCFunction_GET_CLASS(_PyObject_CAST(func))
+#endif
+
+#ifdef __cplusplus
+}
 #endif

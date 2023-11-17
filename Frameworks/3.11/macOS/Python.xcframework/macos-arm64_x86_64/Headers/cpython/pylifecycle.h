@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* Py_FrozenMain is kept out of the Limited API until documented and present
    in all builds of Python */
 PyAPI_FUNC(int) Py_FrozenMain(int argc, char **argv);
@@ -63,3 +67,7 @@ PyAPI_FUNC(int) _Py_LegacyLocaleDetected(int warn);
 PyAPI_FUNC(char *) _Py_SetLocaleFromEnv(int category);
 
 PyAPI_FUNC(PyThreadState *) _Py_NewInterpreter(int isolated_subinterpreter);
+
+#ifdef __cplusplus
+}
+#endif

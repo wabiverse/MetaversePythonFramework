@@ -156,13 +156,14 @@ PyAPI_FUNC(void) PyEval_ReleaseThread(PyThreadState *tstate);
 #define FVS_MASK      0x4
 #define FVS_HAVE_SPEC 0x4
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_CEVAL_H
 #  include "cpython/ceval.h"
 #  undef Py_CPYTHON_CEVAL_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_CEVAL_H */

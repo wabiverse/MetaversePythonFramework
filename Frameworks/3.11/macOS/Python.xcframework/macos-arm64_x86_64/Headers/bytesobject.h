@@ -3,11 +3,12 @@
 
 #ifndef Py_BYTESOBJECT_H
 #define Py_BYTESOBJECT_H
+
+#include <stdarg.h>               // va_list
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <stdarg.h>               // va_list
 
 /*
 Type PyBytesObject represents a byte string.  An extra zero byte is
@@ -57,13 +58,14 @@ PyAPI_FUNC(int) PyBytes_AsStringAndSize(
     Py_ssize_t *len     /* pointer to length variable or NULL */
     );
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_BYTESOBJECT_H
 #  include "cpython/bytesobject.h"
 #  undef Py_CPYTHON_BYTESOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_BYTESOBJECT_H */

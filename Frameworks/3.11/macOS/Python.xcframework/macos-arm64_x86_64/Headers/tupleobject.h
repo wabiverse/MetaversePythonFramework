@@ -34,13 +34,14 @@ PyAPI_FUNC(int) PyTuple_SetItem(PyObject *, Py_ssize_t, PyObject *);
 PyAPI_FUNC(PyObject *) PyTuple_GetSlice(PyObject *, Py_ssize_t, Py_ssize_t);
 PyAPI_FUNC(PyObject *) PyTuple_Pack(Py_ssize_t, ...);
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_TUPLEOBJECT_H
 #  include "cpython/tupleobject.h"
 #  undef Py_CPYTHON_TUPLEOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_TUPLEOBJECT_H */
