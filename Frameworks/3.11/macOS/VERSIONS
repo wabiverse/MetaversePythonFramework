@@ -1,0 +1,8 @@
+Python version: 3.11.6 
+Build: b3
+Min macOS version: 12.0
+---------------------
+libFFI: built-in
+BZip2: 1.0.8-1
+OpenSSL: 3.0.12-1
+XZ: 5.4.4-1

@@ -2,6 +2,7 @@
 *.swp
 .envrc
 .vscode/
+.build/
 build
 dist
 downloads
