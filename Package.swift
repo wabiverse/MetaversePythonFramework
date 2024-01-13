@@ -28,7 +28,7 @@ let package = Package(
     ),
     .binaryTarget(
       name: "Python",
-      path: "Frameworks/3.11/Python.xcframework"
+      path: "Frameworks/3.11/macOS/Python.xcframework"
     ),
     .testTarget(
       name: "PyBundleTests",
