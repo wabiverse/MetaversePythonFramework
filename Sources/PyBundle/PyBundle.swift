@@ -39,9 +39,19 @@ public class PyBundle
 
   public func pyInit()
   {
+    #if os(macOS)
+    let stdlib = "python/3.11/macOS/python-stdlib"
+    #elseif os(visionOS)
+    let stdlib = "python/3.11/xrOS/python-stdlib"
+    #elseif os(iOS)
+    let stdlib = "python/3.11/iOS/python-stdlib"
+    #else
+    let stdlib = "python/3.11/macOS/python-stdlib"
+    #endif
+
     guard
-      let stdLibPath = Bundle.module.path(forResource: "python/3.11/macOS/python-stdlib", ofType: nil),
-      let libDynloadPath = Bundle.module.path(forResource: "python/3.11/macOS/python-stdlib/lib-dynload", ofType: nil)
+      let stdLibPath = Bundle.module.path(forResource: stdlib, ofType: nil),
+      let libDynloadPath = Bundle.module.path(forResource: "\(stdlib)/lib-dynload", ofType: nil)
     else { return }
 
     self.stdLibPath = stdLibPath
