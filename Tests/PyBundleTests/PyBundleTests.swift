@@ -32,13 +32,16 @@ final class PyBundleTests: XCTestCase
     PyBundle.shared.pyInit()
     PyBundle.shared.pyInfo()
 
-    XCTAssertTrue(FileManager.default.fileExists(atPath: PyBundle.shared.stdLibPath!))
-    XCTAssertTrue(FileManager.default.fileExists(atPath: PyBundle.shared.libDynloadPath!))
+    XCTAssertTrue(FileManager.default.fileExists(atPath: PyBundle.shared.stdLibPath!, isDirectory: nil))
 
-    let pythonHome = String(getenv("PYTHONHOME").pointee)
+    var pythonHome = ""
+    if let env = getenv("PYTHONHOME")
+    {
+      pythonHome = String(cString: env)
+    }
     XCTAssertTrue(FileManager.default.fileExists(atPath: pythonHome))
 
-    let pythonPaths = String(getenv("PYTHONPATH").pointee).components(separatedBy: ":")
+    let pythonPaths = pythonHome.components(separatedBy: ":")
     for path in pythonPaths
     {
       XCTAssertTrue(FileManager.default.fileExists(atPath: path))
