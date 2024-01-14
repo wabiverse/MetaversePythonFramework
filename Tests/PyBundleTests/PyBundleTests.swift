@@ -29,10 +29,10 @@ final class PyBundleTests: XCTestCase
 {
   func testPyInit()
   {
-    PyBundle.shared.pyInit()
-    PyBundle.shared.pyInfo()
+    PyBundler.shared.pyInit()
+    PyBundler.shared.pyInfo()
 
-    XCTAssertTrue(FileManager.default.fileExists(atPath: PyBundle.shared.stdLibPath!, isDirectory: nil))
+    XCTAssertTrue(FileManager.default.fileExists(atPath: PyBundler.shared.stdLibPath!, isDirectory: nil))
 
     var pythonHome = ""
     if let env = getenv("PYTHONHOME")

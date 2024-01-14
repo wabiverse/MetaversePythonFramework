@@ -3,6 +3,13 @@ import PackageDescription
 
 let package = Package(
   name: "MetaversePythonFramework",
+  platforms: [
+    .macOS(.v14),
+    .iOS(.v17),
+    .tvOS(.v17),
+    .visionOS(.v1),
+    .watchOS(.v10),
+  ],
   products: [
     .library(
       name: "Python",
@@ -20,7 +27,7 @@ let package = Package(
         .target(name: "Python")
       ],
       resources: [
-        .copy("Resources"),
+        .copy("Resources/python"),
       ],
       swiftSettings: [
         .interoperabilityMode(.C)
@@ -28,7 +35,7 @@ let package = Package(
     ),
     .binaryTarget(
       name: "Python",
-      path: "Frameworks/3.11/macOS/Python.xcframework"
+      path: "Frameworks/3.11/Python.xcframework"
     ),
     .testTarget(
       name: "PyBundleTests",

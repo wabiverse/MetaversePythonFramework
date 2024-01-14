@@ -25,9 +25,9 @@ import Foundation
 import Python
 import PythonKit
 
-public class PyBundle
+public class PyBundler
 {
-  public static var shared = PyBundle()
+  public static var shared = PyBundler()
 
   private init()
   {
