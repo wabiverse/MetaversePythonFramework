@@ -7,75 +7,83 @@ build_time_vars = {'ABIFLAGS': '',
  'ALIGNOF_SIZE_T': 8,
  'ALT_SOABI': 0,
  'ANDROID_API_LEVEL': 0,
- 'AR': '/usr/bin/xcrun ar',
+ 'AR': 'ar',
  'ARFLAGS': 'rcs',
- 'BASECFLAGS': '-Wsign-compare -Wunreachable-code -fno-common -dynamic',
- 'BASECPPFLAGS': '-IObjects -IInclude -IPython',
+ 'BASECFLAGS': '',
+ 'BASECPPFLAGS': '',
  'BASEMODLIBS': '',
- 'BINDIR': '/Library/Frameworks/Python.framework/Versions/3.11/bin',
- 'BINLIBDEST': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11',
- 'BLDLIBRARY': '',
- 'BLDSHARED': 'clang -bundle -undefined dynamic_lookup -arch arm64 -arch '
-              'x86_64 -g',
+ 'BINDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin',
+ 'BINLIBDEST': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11',
+ 'BLDLIBRARY': 'libpython3.11.a',
+ 'BLDSHARED': 'apple-darwin-gcc -bundle -undefined dynamic_lookup -arch arm64 '
+              '-arch x86_64 -isysroot '
+              '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+              '-mmacosx-version-min=11.0',
  'BOOTSTRAP_HEADERS': '\\',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
- 'BUILD_GNU_TYPE': 'x86_64-apple-darwin20.6.0',
+ 'BUILD_GNU_TYPE': 'x86_64-apple-darwin21.6.0',
  'BYTESTR_DEPS': '\\',
- 'CC': 'clang',
+ 'CC': 'apple-darwin-gcc',
  'CCSHARED': '',
- 'CFLAGS': '-Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g '
-           '-fwrapv -O3 -Wall -arch arm64 -arch x86_64 -g',
+ 'CFLAGS': '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 -isysroot '
+           '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+           '-mmacosx-version-min=11.0',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '-fno-strict-aliasing',
+ 'CFLAGS_NODIST': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': '-arch arm64 -arch x86_64 -g',
- 'CONFIGURE_CFLAGS_NODIST': '-flto -std=c11 -Wextra -Wno-unused-parameter '
-                            '-Wno-missing-field-initializers '
-                            '-Wstrict-prototypes '
-                            '-Werror=implicit-function-declaration '
+ 'CONFIGURE_CFLAGS': '-arch arm64 -arch x86_64 -isysroot '
+                     '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                     '-mmacosx-version-min=11.0',
+ 'CONFIGURE_CFLAGS_NODIST': '-std=c11 -Werror=implicit-function-declaration '
                             '-fvisibility=hidden',
- 'CONFIGURE_CPPFLAGS': '',
- 'CONFIGURE_LDFLAGS': '-arch arm64 -arch x86_64 -g',
- 'CONFIGURE_LDFLAGS_NODIST': '-flto -Wl,-export_dynamic -g',
- 'CONFIGURE_LDFLAGS_NOLTO': '-flto=thin',
- 'CONFIG_ARGS': "'-C' '--enable-framework' '--enable-universalsdk=/' "
-                "'--with-universal-archs=universal2' '--with-computed-gotos' "
-                "'--without-ensurepip' "
-                "'--with-openssl=/tmp/_py/libraries/usr/local' "
-                "'--enable-optimizations' '--with-lto' "
-                "'TCLTK_CFLAGS=-I/tmp/_py/libraries/usr/local/include' "
-                "'TCLTK_LIBS=-ltcl8.6 -ltk8.6' 'LDFLAGS=-g' 'CFLAGS=-g' "
-                "'CC=clang'",
- 'CONFINCLUDEDIR': '/Library/Frameworks/Python.framework/Versions/3.11/include',
- 'CONFINCLUDEPY': '/Library/Frameworks/Python.framework/Versions/3.11/include/python3.11',
+ 'CONFIGURE_CPPFLAGS': '-isysroot '
+                       '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
+ 'CONFIGURE_LDFLAGS': '-arch arm64 -arch x86_64 -isysroot '
+                      '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                      '-mmacosx-version-min=11.0',
+ 'CONFIGURE_LDFLAGS_NODIST': '',
+ 'CONFIGURE_LDFLAGS_NOLTO': '',
+ 'CONFIG_ARGS': "'CC=apple-darwin-gcc' 'CPP=apple-darwin-cpp' "
+                "'CFLAGS=-mmacosx-version-min=11.0' "
+                "'LDFLAGS=-mmacosx-version-min=11.0' "
+                "'LIBLZMA_CFLAGS=-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/xz-5.4.4/include' "
+                "'LIBLZMA_LIBS=-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/xz-5.4.4/lib "
+                "-llzma' "
+                "'BZIP2_CFLAGS=-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/bzip2-1.0.8/include' "
+                "'BZIP2_LIBS=-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/bzip2-1.0.8/lib "
+                "-lbz2' 'MACOSX_DEPLOYMENT_TARGET=11.0' "
+                "'--prefix=/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6' "
+                "'--enable-ipv6' '--enable-universalsdk' "
+                "'--with-openssl=/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2' "
+                "'--with-universal-archs=universal2' '--without-ensurepip'",
+ 'CONFINCLUDEDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include',
+ 'CONFINCLUDEPY': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include/python3.11',
  'COREPYTHONPATH': '',
- 'COVERAGE_INFO': '/private/tmp/_py/_bld/python/coverage.info',
+ 'COVERAGE_INFO': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/macOS/macosx/python-3.11.6/coverage.info',
  'COVERAGE_LCOV_OPTIONS': '--rc lcov_branch_coverage=1',
- 'COVERAGE_REPORT': '/private/tmp/_py/_bld/python/lcov-report',
+ 'COVERAGE_REPORT': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/macOS/macosx/python-3.11.6/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--rc lcov_branch_coverage=1 --branch-coverage '
                             '--title "CPython 3.11 LCOV report [commit $(shell '
                             ')]"',
- 'CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-             '-I/Users/sysadmin/build/v3.11.6/Include',
- 'CXX': 'clang++',
- 'DECIMAL_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_decimal/libmpdec '
-                   '-DUNIVERSAL=1',
+ 'CPPFLAGS': '-I. -I./Include -isysroot '
+             '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
+ 'CXX': 'c++',
+ 'DECIMAL_CFLAGS': '-I./Modules/_decimal/libmpdec -DUNIVERSAL=1',
  'DECIMAL_LDFLAGS': '-lm Modules/_decimal/libmpdec/libmpdec.a',
  'DEEPFREEZE_C': 'Python/deepfreeze/deepfreeze.c',
- 'DEEPFREEZE_DEPS': '/Users/sysadmin/build/v3.11.6/Tools/scripts/deepfreeze.py '
-                    '_bootstrap_python '
-                    '/Users/sysadmin/build/v3.11.6/Programs/_freeze_module.py '
-                    '\\',
+ 'DEEPFREEZE_DEPS': './Tools/scripts/deepfreeze.py _bootstrap_python '
+                    './Programs/_freeze_module.py \\',
  'DEEPFREEZE_OBJS': 'Python/deepfreeze/deepfreeze.o',
- 'DESTDIRS': '/Library/Frameworks/Python.framework/Versions/3.11 '
-             '/Library/Frameworks/Python.framework/Versions/3.11/lib '
-             '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11 '
-             '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload',
- 'DESTLIB': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11',
+ 'DESTDIRS': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6 '
+             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib '
+             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11 '
+             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11/lib-dynload',
+ 'DESTLIB': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11',
  'DESTPATH': '',
- 'DESTSHARED': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload',
+ 'DESTSHARED': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
  'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
@@ -97,7 +105,7 @@ build_time_vars = {'ABIFLAGS': '',
  'ENSUREPIP': 'no',
  'EXE': '',
  'EXEMODE': 755,
- 'EXPAT_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/expat',
+ 'EXPAT_CFLAGS': '-I./Modules/expat',
  'EXPAT_LDFLAGS': '-lm Modules/expat/libexpat.a',
  'EXPORTSFROM': '',
  'EXPORTSYMS': '',
@@ -106,12 +114,10 @@ build_time_vars = {'ABIFLAGS': '',
  'EXT_SUFFIX': '.cpython-311-darwin.so',
  'FILEMODE': 644,
  'FLOAT_WORDS_BIGENDIAN': 0,
- 'FREEZE_MODULE': './_bootstrap_python '
-                  '/Users/sysadmin/build/v3.11.6/Programs/_freeze_module.py',
+ 'FREEZE_MODULE': './_bootstrap_python ./Programs/_freeze_module.py',
  'FREEZE_MODULE_BOOTSTRAP': './Programs/_freeze_module',
  'FREEZE_MODULE_BOOTSTRAP_DEPS': 'Programs/_freeze_module',
- 'FREEZE_MODULE_DEPS': '_bootstrap_python '
-                       '/Users/sysadmin/build/v3.11.6/Programs/_freeze_module.py',
+ 'FREEZE_MODULE_DEPS': '_bootstrap_python ./Programs/_freeze_module.py',
  'FROZEN_FILES_IN': '\\',
  'FROZEN_FILES_OUT': '\\',
  'GETPGRP_HAVE_ARG': 0,
@@ -143,7 +149,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_BROKEN_SEM_GETVALUE': 1,
  'HAVE_BROKEN_UNSETENV': 0,
  'HAVE_BUILTIN_ATOMIC': 1,
- 'HAVE_BZLIB_H': 1,
+ 'HAVE_BZLIB_H': 0,
  'HAVE_CHFLAGS': 1,
  'HAVE_CHMOD': 1,
  'HAVE_CHOWN': 1,
@@ -353,7 +359,7 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_LONG_DOUBLE': 1,
  'HAVE_LSTAT': 1,
  'HAVE_LUTIMES': 1,
- 'HAVE_LZMA_H': 1,
+ 'HAVE_LZMA_H': 0,
  'HAVE_MADVISE': 1,
  'HAVE_MAKEDEV': 1,
  'HAVE_MBRTOWC': 1,
@@ -362,9 +368,9 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_MEMRCHR': 0,
  'HAVE_MKDIRAT': 1,
  'HAVE_MKFIFO': 1,
- 'HAVE_MKFIFOAT': 0,
+ 'HAVE_MKFIFOAT': 1,
  'HAVE_MKNOD': 1,
- 'HAVE_MKNODAT': 0,
+ 'HAVE_MKNODAT': 1,
  'HAVE_MKTIME': 1,
  'HAVE_MMAP': 1,
  'HAVE_MREMAP': 0,
@@ -596,78 +602,80 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_WORKING_TZSET': 1,
  'HAVE_WRITEV': 1,
  'HAVE_ZLIB_COPY': 1,
- 'HAVE_ZLIB_H': 1,
+ 'HAVE_ZLIB_H': 0,
  'HAVE__GETPTY': 0,
  'HOSTRUNNER': '',
- 'HOST_GNU_TYPE': 'x86_64-apple-darwin20.6.0',
- 'INCLDIRSTOMAKE': '/Library/Frameworks/Python.framework/Versions/3.11/include '
-                   '/Library/Frameworks/Python.framework/Versions/3.11/include '
-                   '/Library/Frameworks/Python.framework/Versions/3.11/include/python3.11 '
-                   '/Library/Frameworks/Python.framework/Versions/3.11/include/python3.11',
- 'INCLUDEDIR': '/Library/Frameworks/Python.framework/Versions/3.11/include',
- 'INCLUDEPY': '/Library/Frameworks/Python.framework/Versions/3.11/include/python3.11',
+ 'HOST_GNU_TYPE': 'x86_64-apple-darwin21.6.0',
+ 'INCLDIRSTOMAKE': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include '
+                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include '
+                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include/python3.11 '
+                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include/python3.11',
+ 'INCLUDEDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include',
+ 'INCLUDEPY': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/include/python3.11',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
  'INSTALL_SCRIPT': '/usr/bin/install -c',
  'INSTALL_SHARED': '/usr/bin/install -c -m 755',
- 'INSTSONAME': 'Python.framework/Versions/3.11/Python',
+ 'INSTSONAME': 'libpython3.11.a',
  'IO_H': 'Modules/_io/_iomodule.h',
  'IO_OBJS': '\\',
- 'LDCXXSHARED': 'clang++ -bundle -undefined dynamic_lookup',
- 'LDFLAGS': '-arch arm64 -arch x86_64 -g',
- 'LDLIBRARY': 'Python.framework/Versions/3.11/Python',
+ 'LDCXXSHARED': 'c++ -bundle -undefined dynamic_lookup',
+ 'LDFLAGS': '-arch arm64 -arch x86_64 -isysroot '
+            '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+            '-mmacosx-version-min=11.0',
+ 'LDFLAGS_NODIST': '',
+ 'LDLIBRARY': 'libpython3.11.a',
  'LDLIBRARYDIR': '',
- 'LDSHARED': 'clang -bundle -undefined dynamic_lookup -arch arm64 -arch x86_64 '
-             '-g',
+ 'LDSHARED': 'apple-darwin-gcc -bundle -undefined dynamic_lookup -arch arm64 '
+             '-arch x86_64 -isysroot '
+             '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+             '-mmacosx-version-min=11.0',
  'LDVERSION': '3.11',
  'LIBC': '',
- 'LIBDEST': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11',
- 'LIBDIR': '/Library/Frameworks/Python.framework/Versions/3.11/lib',
+ 'LIBDEST': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11',
+ 'LIBDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
- 'LIBEXPAT_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/expat '
-                    '-Wsign-compare -Wunreachable-code -fno-common -dynamic '
-                    '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 -g '
-                    '-flto -std=c11 -Wextra -Wno-unused-parameter '
-                    '-Wno-missing-field-initializers -Wstrict-prototypes '
-                    '-Werror=implicit-function-declaration -fvisibility=hidden '
-                    '-fprofile-instr-use=code.profclangd '
-                    '-I/Users/sysadmin/build/v3.11.6/Include/internal '
-                    '-IObjects -IInclude -IPython -I. '
-                    '-I/Users/sysadmin/build/v3.11.6/Include',
+ 'LIBEXPAT_CFLAGS': '-I./Modules/expat -DNDEBUG -g -fwrapv -O3 -Wall -arch '
+                    'arm64 -arch x86_64 -isysroot '
+                    '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                    '-mmacosx-version-min=11.0 -std=c11 '
+                    '-Werror=implicit-function-declaration '
+                    '-fvisibility=hidden  -I./Include/internal -I. -I./Include '
+                    '-isysroot '
+                    '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
  'LIBEXPAT_HEADERS': '\\',
  'LIBEXPAT_OBJS': '\\',
  'LIBFFI_INCLUDEDIR': '',
+ 'LIBFFI_LIB': '',
+ 'LIBFFI_LIBDIR': '',
  'LIBM': '',
  'LIBMPDEC_A': 'Modules/_decimal/libmpdec/libmpdec.a',
- 'LIBMPDEC_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_decimal/libmpdec '
-                    '-DUNIVERSAL=1 -Wsign-compare -Wunreachable-code '
-                    '-fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -arch '
-                    'arm64 -arch x86_64 -g -flto -std=c11 -Wextra '
-                    '-Wno-unused-parameter -Wno-missing-field-initializers '
-                    '-Wstrict-prototypes -Werror=implicit-function-declaration '
-                    '-fvisibility=hidden -fprofile-instr-use=code.profclangd '
-                    '-I/Users/sysadmin/build/v3.11.6/Include/internal '
-                    '-IObjects -IInclude -IPython -I. '
-                    '-I/Users/sysadmin/build/v3.11.6/Include',
+ 'LIBMPDEC_CFLAGS': '-I./Modules/_decimal/libmpdec -DUNIVERSAL=1 -DNDEBUG -g '
+                    '-fwrapv -O3 -Wall -arch arm64 -arch x86_64 -isysroot '
+                    '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                    '-mmacosx-version-min=11.0 -std=c11 '
+                    '-Werror=implicit-function-declaration '
+                    '-fvisibility=hidden  -I./Include/internal -I. -I./Include '
+                    '-isysroot '
+                    '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
  'LIBMPDEC_HEADERS': '\\',
  'LIBMPDEC_OBJS': '\\',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/Library/Frameworks/Python.framework/Versions/3.11/lib/pkgconfig',
- 'LIBPL': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/config-3.11-darwin',
+ 'LIBPC': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/pkgconfig',
+ 'LIBPL': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11/config-3.11-darwin',
  'LIBPYTHON': '',
  'LIBRARY': 'libpython3.11.a',
- 'LIBRARY_DEPS': 'libpython3.11.a Python.framework/Versions/3.11/Python',
+ 'LIBRARY_DEPS': 'libpython3.11.a',
  'LIBRARY_OBJS': '\\',
  'LIBRARY_OBJS_OMIT_FROZEN': '\\',
  'LIBS': '-ldl  -framework CoreFoundation',
  'LIBSUBDIRS': 'asyncio \\',
- 'LINKCC': 'clang',
- 'LINKFORSHARED': '-Wl,-stack_size,1000000  -framework CoreFoundation '
-                  'Python.framework/Versions/3.11/Python',
- 'LINK_PYTHON_DEPS': 'libpython3.11.a Python.framework/Versions/3.11/Python',
- 'LINK_PYTHON_OBJS': '',
+ 'LINKCC': 'apple-darwin-gcc',
+ 'LINKFORSHARED': '-Wl,-stack_size,1000000  -framework CoreFoundation',
+ 'LINK_PYTHON_DEPS': 'libpython3.11.a',
+ 'LINK_PYTHON_OBJS': '\\',
  'LIPO_32BIT_FLAGS': '',
  'LIPO_INTEL64_FLAGS': '-extract x86_64',
  'LLVM_PROF_ERR': 'no',
@@ -678,14 +686,14 @@ build_time_vars = {'ABIFLAGS': '',
  'LOCALMODLIBS': '',
  'MACHDEP': 'darwin',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11',
- 'MACOSX_DEPLOYMENT_TARGET': '10.9',
- 'MAINCC': 'clang',
+ 'MACHDESTLIB': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11',
+ 'MACOSX_DEPLOYMENT_TARGET': '11.0',
+ 'MAINCC': 'apple-darwin-gcc',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
- 'MAKESETUP': '/Users/sysadmin/build/v3.11.6/Modules/makesetup',
- 'MANDIR': '/Library/Frameworks/Python.framework/Versions/3.11/share/man',
- 'MKDIR_P': '/Users/sysadmin/build/v3.11.6/install-sh -c -d',
+ 'MAKESETUP': './Modules/makesetup',
+ 'MANDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/share/man',
+ 'MKDIR_P': './install-sh -c -d',
  'MODBUILT_NAMES': 'atexit  faulthandler  posix  _signal  _tracemalloc  '
                    '_codecs  _collections  errno  _io  itertools  _sre  '
                    '_thread  time  _weakref  _abc  _functools  _locale  '
@@ -713,7 +721,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_BINASCII_CFLAGS': '-DUSE_ZLIB_CRC32',
  'MODULE_BINASCII_LDFLAGS': '-lz',
  'MODULE_BINASCII_STATE': 'yes',
- 'MODULE_CMATH_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_math.h',
+ 'MODULE_CMATH_DEPS': './Modules/_math.h',
  'MODULE_CMATH_LDFLAGS': '',
  'MODULE_CMATH_STATE': 'yes',
  'MODULE_ERRNO_LDFLAGS': '',
@@ -722,7 +730,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_FCNTL_STATE': 'yes',
  'MODULE_GRP_STATE': 'yes',
  'MODULE_ITERTOOLS_LDFLAGS': '',
- 'MODULE_MATH_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_math.h',
+ 'MODULE_MATH_DEPS': './Modules/_math.h',
  'MODULE_MATH_LDFLAGS': '',
  'MODULE_MATH_STATE': 'yes',
  'MODULE_MMAP_STATE': 'yes',
@@ -734,7 +742,7 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_POSIX_LDFLAGS': '',
  'MODULE_PWD_LDFLAGS': '',
  'MODULE_PWD_STATE': 'yes',
- 'MODULE_PYEXPAT_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/expat',
+ 'MODULE_PYEXPAT_CFLAGS': '-I./Modules/expat',
  'MODULE_PYEXPAT_DEPS': '\\ Modules/expat/libexpat.a',
  'MODULE_PYEXPAT_LDFLAGS': '-lm Modules/expat/libexpat.a',
  'MODULE_PYEXPAT_STATE': 'yes',
@@ -745,8 +753,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE_TERMIOS_STATE': 'yes',
  'MODULE_TIME_LDFLAGS': '',
  'MODULE_TIME_STATE': 'yes',
- 'MODULE_UNICODEDATA_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/unicodedata_db.h '
-                            '/Users/sysadmin/build/v3.11.6/Modules/unicodename_db.h',
+ 'MODULE_UNICODEDATA_DEPS': './Modules/unicodedata_db.h '
+                            './Modules/unicodename_db.h',
  'MODULE_UNICODEDATA_STATE': 'yes',
  'MODULE_XXLIMITED_35_STATE': 'yes',
  'MODULE_XXLIMITED_STATE': 'yes',
@@ -758,26 +766,26 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__ASYNCIO_STATE': 'yes',
  'MODULE__BISECT_STATE': 'yes',
  'MODULE__BLAKE2_CFLAGS': '',
- 'MODULE__BLAKE2_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2-config.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2-impl.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2b-load-sse2.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2b-load-sse41.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2b-ref.c '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2b-round.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2b.c '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s-load-sse2.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s-load-sse41.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s-load-xop.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s-ref.c '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s-round.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/impl/blake2s.c '
-                        '/Users/sysadmin/build/v3.11.6/Modules/_blake2/blake2module.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__BLAKE2_DEPS': './Modules/_blake2/impl/blake2-config.h '
+                        './Modules/_blake2/impl/blake2-impl.h '
+                        './Modules/_blake2/impl/blake2.h '
+                        './Modules/_blake2/impl/blake2b-load-sse2.h '
+                        './Modules/_blake2/impl/blake2b-load-sse41.h '
+                        './Modules/_blake2/impl/blake2b-ref.c '
+                        './Modules/_blake2/impl/blake2b-round.h '
+                        './Modules/_blake2/impl/blake2b.c '
+                        './Modules/_blake2/impl/blake2s-load-sse2.h '
+                        './Modules/_blake2/impl/blake2s-load-sse41.h '
+                        './Modules/_blake2/impl/blake2s-load-xop.h '
+                        './Modules/_blake2/impl/blake2s-ref.c '
+                        './Modules/_blake2/impl/blake2s-round.h '
+                        './Modules/_blake2/impl/blake2s.c '
+                        './Modules/_blake2/blake2module.h ./Modules/hashlib.h',
  'MODULE__BLAKE2_LDFLAGS': '',
  'MODULE__BLAKE2_STATE': 'yes',
- 'MODULE__BZ2_CFLAGS': '',
- 'MODULE__BZ2_LDFLAGS': '-lbz2',
+ 'MODULE__BZ2_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/bzip2-1.0.8/include',
+ 'MODULE__BZ2_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/bzip2-1.0.8/lib '
+                        '-lbz2',
  'MODULE__BZ2_STATE': 'yes',
  'MODULE__CODECS_CN_STATE': 'yes',
  'MODULE__CODECS_HK_STATE': 'yes',
@@ -792,47 +800,47 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__CRYPT_LDFLAGS': '',
  'MODULE__CRYPT_STATE': 'yes',
  'MODULE__CSV_STATE': 'yes',
- 'MODULE__CTYPES_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_ctypes/ctypes.h',
+ 'MODULE__CTYPES_DEPS': './Modules/_ctypes/ctypes.h',
  'MODULE__CTYPES_TEST_LDFLAGS': '-lm',
  'MODULE__CTYPES_TEST_STATE': 'yes',
  'MODULE__DATETIME_LDFLAGS': '',
  'MODULE__DATETIME_STATE': 'yes',
- 'MODULE__DECIMAL_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_decimal/libmpdec '
-                           '-DUNIVERSAL=1',
- 'MODULE__DECIMAL_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_decimal/docstrings.h '
-                         '\\ Modules/_decimal/libmpdec/libmpdec.a',
+ 'MODULE__DECIMAL_CFLAGS': '-I./Modules/_decimal/libmpdec -DUNIVERSAL=1',
+ 'MODULE__DECIMAL_DEPS': './Modules/_decimal/docstrings.h \\ '
+                         'Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_LDFLAGS': '-lm Modules/_decimal/libmpdec/libmpdec.a',
  'MODULE__DECIMAL_STATE': 'yes',
- 'MODULE__ELEMENTTREE_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/expat',
- 'MODULE__ELEMENTTREE_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/pyexpat.c '
-                             '\\ Modules/expat/libexpat.a',
+ 'MODULE__ELEMENTTREE_CFLAGS': '-I./Modules/expat',
+ 'MODULE__ELEMENTTREE_DEPS': './Modules/pyexpat.c \\ Modules/expat/libexpat.a',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
  'MODULE__GDBM_STATE': 'missing',
- 'MODULE__HASHLIB_CFLAGS': '-I/tmp/_py/libraries/usr/local/include',
- 'MODULE__HASHLIB_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
- 'MODULE__HASHLIB_LDFLAGS': '  -lcrypto',
+ 'MODULE__HASHLIB_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/include',
+ 'MODULE__HASHLIB_DEPS': './Modules/hashlib.h',
+ 'MODULE__HASHLIB_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/lib   '
+                            '-lcrypto',
  'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
- 'MODULE__IO_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_io',
- 'MODULE__IO_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_io/_iomodule.h',
+ 'MODULE__IO_CFLAGS': '-I./Modules/_io',
+ 'MODULE__IO_DEPS': './Modules/_io/_iomodule.h',
  'MODULE__IO_LDFLAGS': '',
  'MODULE__IO_STATE': 'yes',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_CFLAGS': '',
- 'MODULE__LZMA_LDFLAGS': '-llzma',
+ 'MODULE__LZMA_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/xz-5.4.4/include',
+ 'MODULE__LZMA_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/xz-5.4.4/lib '
+                         '-llzma',
  'MODULE__LZMA_STATE': 'yes',
- 'MODULE__MD5_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__MD5_DEPS': './Modules/hashlib.h',
  'MODULE__MD5_STATE': 'yes',
  'MODULE__MULTIBYTECODEC_STATE': 'yes',
- 'MODULE__MULTIPROCESSING_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_multiprocessing',
+ 'MODULE__MULTIPROCESSING_CFLAGS': '-I./Modules/_multiprocessing',
  'MODULE__MULTIPROCESSING_STATE': 'yes',
  'MODULE__OPCODE_STATE': 'yes',
  'MODULE__OPERATOR_LDFLAGS': '',
  'MODULE__PICKLE_STATE': 'yes',
- 'MODULE__POSIXSHMEM_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_multiprocessing',
+ 'MODULE__POSIXSHMEM_CFLAGS': '-I./Modules/_multiprocessing',
  'MODULE__POSIXSHMEM_LDFLAGS': '',
  'MODULE__POSIXSHMEM_STATE': 'yes',
  'MODULE__POSIXSUBPROCESS_STATE': 'yes',
@@ -841,43 +849,36 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__SCPROXY_LDFLAGS': '-framework SystemConfiguration -framework '
                             'CoreFoundation',
  'MODULE__SCPROXY_STATE': 'yes',
- 'MODULE__SHA1_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__SHA1_DEPS': './Modules/hashlib.h',
  'MODULE__SHA1_STATE': 'yes',
- 'MODULE__SHA256_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__SHA256_DEPS': './Modules/hashlib.h',
  'MODULE__SHA256_STATE': 'yes',
- 'MODULE__SHA3_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_sha3/sha3.c '
-                      '/Users/sysadmin/build/v3.11.6/Modules/_sha3/sha3.h '
-                      '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__SHA3_DEPS': './Modules/_sha3/sha3.c ./Modules/_sha3/sha3.h '
+                      './Modules/hashlib.h',
  'MODULE__SHA3_STATE': 'yes',
- 'MODULE__SHA512_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/hashlib.h',
+ 'MODULE__SHA512_DEPS': './Modules/hashlib.h',
  'MODULE__SHA512_STATE': 'yes',
  'MODULE__SIGNAL_LDFLAGS': '',
- 'MODULE__SOCKET_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/socketmodule.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/addrinfo.h '
-                        '/Users/sysadmin/build/v3.11.6/Modules/getaddrinfo.c '
-                        '/Users/sysadmin/build/v3.11.6/Modules/getnameinfo.c',
+ 'MODULE__SOCKET_DEPS': './Modules/socketmodule.h ./Modules/addrinfo.h '
+                        './Modules/getaddrinfo.c ./Modules/getnameinfo.c',
  'MODULE__SOCKET_STATE': 'yes',
- 'MODULE__SQLITE3_CFLAGS': '-I/Users/sysadmin/build/v3.11.6/Modules/_sqlite',
- 'MODULE__SQLITE3_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/connection.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/cursor.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/microprotocols.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/module.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/prepare_protocol.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/row.h '
-                         '/Users/sysadmin/build/v3.11.6/Modules/_sqlite/util.h',
+ 'MODULE__SQLITE3_CFLAGS': '-I./Modules/_sqlite',
+ 'MODULE__SQLITE3_DEPS': './Modules/_sqlite/connection.h '
+                         './Modules/_sqlite/cursor.h '
+                         './Modules/_sqlite/microprotocols.h '
+                         './Modules/_sqlite/module.h '
+                         './Modules/_sqlite/prepare_protocol.h '
+                         './Modules/_sqlite/row.h ./Modules/_sqlite/util.h',
  'MODULE__SQLITE3_LDFLAGS': '-lsqlite3',
  'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
- 'MODULE__SSL_CFLAGS': '-I/tmp/_py/libraries/usr/local/include',
- 'MODULE__SSL_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/_ssl.h '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl/cert.c '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl/debughelpers.c '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl/misc.c '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl_data.h '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl_data_111.h '
-                     '/Users/sysadmin/build/v3.11.6/Modules/_ssl_data_300.h '
-                     '/Users/sysadmin/build/v3.11.6/Modules/socketmodule.h',
- 'MODULE__SSL_LDFLAGS': ' -lssl -lcrypto',
+ 'MODULE__SSL_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/include',
+ 'MODULE__SSL_DEPS': './Modules/_ssl.h ./Modules/_ssl/cert.c '
+                     './Modules/_ssl/debughelpers.c ./Modules/_ssl/misc.c '
+                     './Modules/_ssl_data.h ./Modules/_ssl_data_111.h '
+                     './Modules/_ssl_data_300.h ./Modules/socketmodule.h',
+ 'MODULE__SSL_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/lib  '
+                        '-lssl -lcrypto',
  'MODULE__SSL_STATE': 'yes',
  'MODULE__STATISTICS_LDFLAGS': '',
  'MODULE__STATISTICS_STATE': 'yes',
@@ -885,16 +886,14 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__STRUCT_STATE': 'yes',
  'MODULE__SYMTABLE_LDFLAGS': '',
  'MODULE__TESTBUFFER_STATE': 'yes',
- 'MODULE__TESTCAPI_DEPS': '/Users/sysadmin/build/v3.11.6/Modules/testcapi_long.h',
+ 'MODULE__TESTCAPI_DEPS': './Modules/testcapi_long.h',
  'MODULE__TESTCAPI_STATE': 'yes',
  'MODULE__TESTCLINIC_STATE': 'yes',
  'MODULE__TESTIMPORTMULTIPLE_STATE': 'yes',
  'MODULE__TESTINTERNALCAPI_STATE': 'yes',
  'MODULE__TESTMULTIPHASE_STATE': 'yes',
  'MODULE__THREAD_LDFLAGS': '',
- 'MODULE__TKINTER_CFLAGS': '-Wno-strict-prototypes -DWITH_APPINIT=1',
- 'MODULE__TKINTER_LDFLAGS': '-ltcl8.6 -ltk8.6',
- 'MODULE__TKINTER_STATE': 'yes',
+ 'MODULE__TKINTER_STATE': 'missing',
  'MODULE__TRACEMALLOC_LDFLAGS': '',
  'MODULE__TYPING_STATE': 'yes',
  'MODULE__UUID_CFLAGS': '',
@@ -907,10 +906,10 @@ build_time_vars = {'ABIFLAGS': '',
  'MULTIARCH': 'darwin',
  'MULTIARCH_CPPFLAGS': '-DMULTIARCH=\\"darwin\\"',
  'MVWDELCH_IS_EXPRESSION': 1,
- 'NO_AS_NEEDED': '-Wl,--no-as-needed',
+ 'NO_AS_NEEDED': '',
  'OBJECT_OBJS': '\\',
- 'OPENSSL_INCLUDES': '-I/tmp/_py/libraries/usr/local/include',
- 'OPENSSL_LDFLAGS': '-L/tmp/_py/libraries/usr/local/lib',
+ 'OPENSSL_INCLUDES': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/include',
+ 'OPENSSL_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/macOS/macosx/openssl-3.1.2/lib',
  'OPENSSL_LIBS': '-lssl -lcrypto',
  'OPENSSL_RPATH': '',
  'OPT': '-DNDEBUG -g -fwrapv -O3 -Wall',
@@ -937,10 +936,10 @@ build_time_vars = {'ABIFLAGS': '',
  'PY3LIBRARY': '',
  'PYLONG_BITS_IN_DIGIT': 0,
  'PYTHON': 'python',
- 'PYTHONFRAMEWORK': 'Python',
- 'PYTHONFRAMEWORKDIR': 'Python.framework',
- 'PYTHONFRAMEWORKINSTALLDIR': '/Library/Frameworks/Python.framework',
- 'PYTHONFRAMEWORKPREFIX': '/Library/Frameworks',
+ 'PYTHONFRAMEWORK': '',
+ 'PYTHONFRAMEWORKDIR': 'no-framework',
+ 'PYTHONFRAMEWORKINSTALLDIR': '',
+ 'PYTHONFRAMEWORKPREFIX': '',
  'PYTHONPATH': '',
  'PYTHON_FOR_BUILD': './python.exe -E',
  'PYTHON_FOR_BUILD_DEPS': 'python.exe',
@@ -949,59 +948,56 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_BUILTIN_HASHLIB_HASHES': '"md5,sha1,sha256,sha512,sha3,blake2"',
- 'PY_BUILTIN_MODULE_CFLAGS': '-Wsign-compare -Wunreachable-code -fno-common '
-                             '-dynamic -DNDEBUG -g -fwrapv -O3 -Wall -arch '
-                             'arm64 -arch x86_64 -g -flto -std=c11 -Wextra '
-                             '-Wno-unused-parameter '
-                             '-Wno-missing-field-initializers '
-                             '-Wstrict-prototypes '
+ 'PY_BUILTIN_MODULE_CFLAGS': '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch '
+                             'x86_64 -isysroot '
+                             '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                             '-mmacosx-version-min=11.0 -std=c11 '
                              '-Werror=implicit-function-declaration '
-                             '-fvisibility=hidden '
-                             '-fprofile-instr-use=code.profclangd '
-                             '-I/Users/sysadmin/build/v3.11.6/Include/internal '
-                             '-IObjects -IInclude -IPython -I. '
-                             '-I/Users/sysadmin/build/v3.11.6/Include '
+                             '-fvisibility=hidden  -I./Include/internal -I. '
+                             '-I./Include -isysroot '
+                             '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
                              '-DPy_BUILD_CORE_BUILTIN',
- 'PY_CFLAGS': '-Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG '
-              '-g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 -g',
- 'PY_CFLAGS_NODIST': '-flto -std=c11 -Wextra -Wno-unused-parameter '
-                     '-Wno-missing-field-initializers -Wstrict-prototypes '
-                     '-Werror=implicit-function-declaration '
-                     '-fvisibility=hidden -fprofile-instr-use=code.profclangd '
-                     '-I/Users/sysadmin/build/v3.11.6/Include/internal',
+ 'PY_CFLAGS': '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 '
+              '-isysroot '
+              '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+              '-mmacosx-version-min=11.0',
+ 'PY_CFLAGS_NODIST': '-std=c11 -Werror=implicit-function-declaration '
+                     '-fvisibility=hidden  -I./Include/internal',
  'PY_COERCE_C_LOCALE': 1,
- 'PY_CORE_CFLAGS': '-Wsign-compare -Wunreachable-code -fno-common -dynamic '
-                   '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 -g '
-                   '-flto -std=c11 -Wextra -Wno-unused-parameter '
-                   '-Wno-missing-field-initializers -Wstrict-prototypes '
-                   '-Werror=implicit-function-declaration -fvisibility=hidden '
-                   '-fprofile-instr-use=code.profclangd '
-                   '-I/Users/sysadmin/build/v3.11.6/Include/internal -IObjects '
-                   '-IInclude -IPython -I. '
-                   '-I/Users/sysadmin/build/v3.11.6/Include -DPy_BUILD_CORE',
- 'PY_CORE_LDFLAGS': '-arch arm64 -arch x86_64 -g -flto -Wl,-export_dynamic -g',
- 'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. '
-                '-I/Users/sysadmin/build/v3.11.6/Include',
+ 'PY_CORE_CFLAGS': '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch x86_64 '
+                   '-isysroot '
+                   '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                   '-mmacosx-version-min=11.0 -std=c11 '
+                   '-Werror=implicit-function-declaration -fvisibility=hidden  '
+                   '-I./Include/internal -I. -I./Include -isysroot '
+                   '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                   '-DPy_BUILD_CORE',
+ 'PY_CORE_LDFLAGS': '-arch arm64 -arch x86_64 -isysroot '
+                    '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                    '-mmacosx-version-min=11.0',
+ 'PY_CPPFLAGS': '-I. -I./Include -isysroot '
+                '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
  'PY_ENABLE_SHARED': 0,
  'PY_FORMAT_SIZE_T': '"z"',
- 'PY_LDFLAGS': '-arch arm64 -arch x86_64 -g',
- 'PY_LDFLAGS_NODIST': '-flto -Wl,-export_dynamic -g',
- 'PY_LDFLAGS_NOLTO': '-arch arm64 -arch x86_64 -g -flto=thin',
+ 'PY_LDFLAGS': '-arch arm64 -arch x86_64 -isysroot '
+               '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+               '-mmacosx-version-min=11.0',
+ 'PY_LDFLAGS_NODIST': '',
+ 'PY_LDFLAGS_NOLTO': '-arch arm64 -arch x86_64 -isysroot '
+                     '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                     '-mmacosx-version-min=11.0',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 0,
  'PY_SQLITE_HAVE_SERIALIZE': 1,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
- 'PY_STDMODULE_CFLAGS': '-Wsign-compare -Wunreachable-code -fno-common '
-                        '-dynamic -DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 '
-                        '-arch x86_64 -g -flto -std=c11 -Wextra '
-                        '-Wno-unused-parameter -Wno-missing-field-initializers '
-                        '-Wstrict-prototypes '
+ 'PY_STDMODULE_CFLAGS': '-DNDEBUG -g -fwrapv -O3 -Wall -arch arm64 -arch '
+                        'x86_64 -isysroot '
+                        '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk '
+                        '-mmacosx-version-min=11.0 -std=c11 '
                         '-Werror=implicit-function-declaration '
-                        '-fvisibility=hidden '
-                        '-fprofile-instr-use=code.profclangd '
-                        '-I/Users/sysadmin/build/v3.11.6/Include/internal '
-                        '-IObjects -IInclude -IPython -I. '
-                        '-I/Users/sysadmin/build/v3.11.6/Include',
+                        '-fvisibility=hidden  -I./Include/internal -I. '
+                        '-I./Include -isysroot '
+                        '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
  'PY_SUPPORT_TIER': 1,
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 0,
@@ -1012,8 +1008,8 @@ build_time_vars = {'ABIFLAGS': '',
  'READELF': ':',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
- 'RUNSHARED': 'DYLD_FRAMEWORK_PATH=/private/tmp/_py/_bld/python',
- 'SCRIPTDIR': '/Library/Frameworks/Python.framework/Versions/3.11/lib',
+ 'RUNSHARED': '',
+ 'SCRIPTDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib',
  'SETPGRP_HAVE_ARG': 0,
  'SHELL': '/bin/sh',
  'SHLIBS': '-ldl  -framework CoreFoundation',
@@ -1045,7 +1041,7 @@ build_time_vars = {'ABIFLAGS': '',
             'Modules/_sre   Modules/_xxtestfuzz   Modules/cjkcodecs   '
             'Modules/expat   Objects   Parser   Programs   Python   '
             'Python/frozen_modules   Python/deepfreeze',
- 'SRC_GDB_HOOKS': '/Users/sysadmin/build/v3.11.6/Tools/gdb/libpython.py',
+ 'SRC_GDB_HOOKS': './Tools/gdb/libpython.py',
  'STATIC_LIBPYTHON': 1,
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
@@ -1056,11 +1052,9 @@ build_time_vars = {'ABIFLAGS': '',
  'SYS_SELECT_WITH_SYS_TIME': 1,
  'TESTOPTS': '',
  'TESTPATH': '',
- 'TESTPYTHON': 'DYLD_FRAMEWORK_PATH=/private/tmp/_py/_bld/python ./python.exe '
-               '-E',
+ 'TESTPYTHON': './python.exe -E',
  'TESTPYTHONOPTS': '',
- 'TESTRUNNER': 'DYLD_FRAMEWORK_PATH=/private/tmp/_py/_bld/python ./python.exe '
-               '-E /Users/sysadmin/build/v3.11.6/Tools/scripts/run_tests.py',
+ 'TESTRUNNER': './python.exe -E ./Tools/scripts/run_tests.py',
  'TESTSUBDIRS': 'ctypes/test \\',
  'TESTTIMEOUT': 1200,
  'TEST_MODULES': 'yes',
@@ -1070,13 +1064,12 @@ build_time_vars = {'ABIFLAGS': '',
  'TM_IN_SYS_TIME': 0,
  'TZPATH': '/usr/share/zoneinfo:/usr/lib/zoneinfo:/usr/share/lib/zoneinfo:/etc/zoneinfo',
  'UNICODE_DEPS': '\\',
- 'UNIVERSALSDK': '/',
- 'UPDATE_FILE': '/Users/sysadmin/build/v3.11.6/Tools/scripts/update_file.py',
- 'USE_COMPUTED_GOTOS': 1,
+ 'UNIVERSALSDK': '/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk',
+ 'UPDATE_FILE': './Tools/scripts/update_file.py',
+ 'USE_COMPUTED_GOTOS': 0,
  'VERSION': '3.11',
- 'VPATH': '/Users/sysadmin/build/v3.11.6',
- 'WASM_ASSETS_DIR': './Library/Frameworks/Python.framework/Versions/3.11',
- 'WASM_STDLIB': './Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/os.py',
+ 'WASM_ASSETS_DIR': './Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6',
+ 'WASM_STDLIB': './Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/lib/python3.11/os.py',
  'WHEEL_PKG_DIR': '',
  'WINDOW_HAS_FLAGS': 1,
  'WITH_DECIMAL_CONTEXTVAR': 1,
@@ -1086,14 +1079,14 @@ build_time_vars = {'ABIFLAGS': '',
  'WITH_EDITLINE': 0,
  'WITH_FREELISTS': 1,
  'WITH_LIBINTL': 0,
- 'WITH_NEXT_FRAMEWORK': 1,
+ 'WITH_NEXT_FRAMEWORK': 0,
  'WITH_PYMALLOC': 1,
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/private/tmp/_py/_bld/python',
- 'abs_srcdir': '/Users/sysadmin/build/v3.11.6',
- 'datarootdir': '/Library/Frameworks/Python.framework/Versions/3.11/share',
- 'exec_prefix': '/Library/Frameworks/Python.framework/Versions/3.11',
- 'prefix': '/Library/Frameworks/Python.framework/Versions/3.11',
- 'srcdir': '/Users/sysadmin/build/v3.11.6'}
+ 'abs_builddir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/macOS/macosx/python-3.11.6',
+ 'abs_srcdir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/macOS/macosx/python-3.11.6',
+ 'datarootdir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/share',
+ 'exec_prefix': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6',
+ 'prefix': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6',
+ 'srcdir': '.'}

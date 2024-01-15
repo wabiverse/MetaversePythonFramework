@@ -95,6 +95,42 @@ _INSTALL_SCHEMES = {
         'scripts': '{base}/Scripts',
         'data': '{base}',
         },
+    'xros': {
+        'stdlib': '{installed_base}/lib/python{py_version_short}',
+        'platstdlib': '{installed_base}/lib/python{py_version_short}',
+        'purelib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'platlib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'include': '{installed_base}/include',
+        'scripts': '{installed_base}/bin',
+        'data': '{installed_base}/Resources',
+        },
+    'ios': {
+        'stdlib': '{installed_base}/lib/python{py_version_short}',
+        'platstdlib': '{installed_base}/lib/python{py_version_short}',
+        'purelib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'platlib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'include': '{installed_base}/include',
+        'scripts': '{installed_base}/bin',
+        'data': '{installed_base}/Resources',
+        },
+    'tvos': {
+        'stdlib': '{installed_base}/lib/python{py_version_short}',
+        'platstdlib': '{installed_base}/lib/python{py_version_short}',
+        'purelib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'platlib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'include': '{installed_base}/include',
+        'scripts': '{installed_base}/bin',
+        'data': '{installed_base}/Resources',
+        },
+    'watchos': {
+        'stdlib': '{installed_base}/lib/python{py_version_short}',
+        'platstdlib': '{installed_base}/lib/python{py_version_short}',
+        'purelib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'platlib': '{installed_base}/lib/python{py_version_short}/site-packages',
+        'include': '{installed_base}/include',
+        'scripts': '{installed_base}/bin',
+        'data': '{installed_base}/Resources',
+        },
     }
 
 # For the OS-native venv scheme, we essentially provide an alias:
@@ -283,12 +319,19 @@ def _get_preferred_schemes():
             'home': 'posix_home',
             'user': 'nt_user',
         }
+    if sys.platform in ('xros', 'ios', 'tvos', 'watchos'):
+        return {
+            'prefix': sys.platform,
+            'home': sys.platform,
+            'user': sys.platform,
+        }
     if sys.platform == 'darwin' and sys._framework:
         return {
             'prefix': 'posix_prefix',
             'home': 'posix_home',
             'user': 'osx_framework_user',
         }
+
     return {
         'prefix': 'posix_prefix',
         'home': 'posix_home',
@@ -788,10 +831,16 @@ def get_platform():
         if m:
             release = m.group()
     elif osname[:6] == "darwin":
-        import _osx_support
-        osname, release, machine = _osx_support.get_platform_osx(
-                                            get_config_vars(),
-                                            osname, release, machine)
+        if sys.platform in ("xros", "ios", "tvos", "watchos"):
+            import _ios_support
+            _, release, _ = _ios_support.get_platform_ios()
+            osname = sys.platform
+            machine = sys.implementation._multiarch
+        else:
+            import _osx_support
+            osname, release, machine = _osx_support.get_platform_osx(
+                                                get_config_vars(),
+                                                osname, release, machine)
 
     return f"{osname}-{release}-{machine}"
 

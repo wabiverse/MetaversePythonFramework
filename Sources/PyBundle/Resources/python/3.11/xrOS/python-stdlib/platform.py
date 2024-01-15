@@ -452,6 +452,26 @@ def mac_ver(release='', versioninfo=('', '', ''), machine=''):
     # If that also doesn't work return the default values
     return release, versioninfo, machine
 
+def iOS_ver():
+    """Get xrOS/iOS/tvOS version information, and return it as a
+    tuple (system, release, model). All tuple entries are strings.
+    """
+    import _ios_support
+    return _ios_support.get_platform_ios()
+
+def is_simulator():
+    """Determine if the current platform is a device simulator.
+
+    Only useful when working with xrOS, iOS, tvOS or watchOS,
+    because Apple provides simulator platforms for those devices.
+
+    If the platform is actual hardware, returns False. Will also
+    return False for device *emulators*, which are indistinguishable
+    from actual devices because they are reproducing actual device
+    properties.
+    """
+    return getattr(sys.implementation, "_simulator", False)
+
 def _java_getprop(name, default):
 
     from java.lang import System
@@ -608,7 +628,7 @@ def _syscmd_file(target, default=''):
         default in case the command should fail.
 
     """
-    if sys.platform in ('dos', 'win32', 'win16'):
+    if sys.platform in ('dos', 'win32', 'win16', 'xros', 'ios', 'tvos', 'watchos'):
         # XXX Others too ?
         return default
 
@@ -749,6 +769,24 @@ class _Processor:
         else:
             csid, cpu_number = vms_lib.getsyi('SYI$_CPU', 0)
             return 'Alpha' if cpu_number >= 128 else 'VAX'
+
+    # On iOS, tvOS and watchOS, os.uname returns the architecture
+    # as uname.machine. On device it doesn't; but there's only
+    # on CPU architecture on device
+    def get_ios():
+        if getattr(sys.implementation, "_simulator", False):
+            return os.uname().machine
+        return 'arm64'
+
+    def get_tvos():
+        if getattr(sys.implementation, "_simulator", False):
+            return os.uname().machine
+        return 'arm64'
+
+    def get_watchos():
+        if getattr(sys.implementation, "_simulator", False):
+            return os.uname().machine
+        return 'arm64_32'
 
     def from_subprocess():
         """
@@ -903,6 +941,15 @@ def uname():
     if system == 'Microsoft' and release == 'Windows':
         system = 'Windows'
         release = 'Vista'
+
+    # Normalize responses on Apple mobile platforms
+    if sys.platform in ('xros', 'ios', 'tvos'):
+        system, release, model = iOS_ver()
+
+        # On xrOS/iOS/tvOS simulators, os.uname() reports the machine as something
+        # like "arm64" or "x86_64".
+        if getattr(sys.implementation, "_simulator", False):
+            machine = f'{model}Simulator'
 
     vals = system, node, release, version, machine
     # Replace 'unknown' values with the more portable ''
@@ -1216,11 +1263,13 @@ def platform(aliased=0, terse=0):
         system, release, version = system_alias(system, release, version)
 
     if system == 'Darwin':
-        # macOS (darwin kernel)
-        macos_release = mac_ver()[0]
-        if macos_release:
-            system = 'macOS'
-            release = macos_release
+        if sys.platform in ('xros', 'ios', 'tvos'):
+            system, release, _ = iOS_ver()
+        else:
+            macos_release = mac_ver()[0]
+            if macos_release:
+                system = 'macOS'
+                release = macos_release
 
     if system == 'Windows':
         # MS platforms

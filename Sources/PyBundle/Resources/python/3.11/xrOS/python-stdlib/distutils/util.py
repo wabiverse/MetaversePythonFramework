@@ -170,7 +170,7 @@ def check_environ ():
     if _environ_checked:
         return
 
-    if os.name == 'posix' and 'HOME' not in os.environ:
+    if os.name == 'posix' and 'HOME' not in os.environ and sys.platform not in ('xros', 'ios', 'tvos', 'watchos'):
         try:
             import pwd
             os.environ['HOME'] = pwd.getpwuid(os.getuid())[5]

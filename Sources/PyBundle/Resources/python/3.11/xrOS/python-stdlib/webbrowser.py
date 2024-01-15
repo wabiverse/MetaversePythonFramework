@@ -596,6 +596,57 @@ def register_standard_browsers():
 
     # what to do if _tryorder is now empty?
 
+#
+# Platform support for iOS
+#
+if sys.platform == 'ios' or sys.platform == 'xros':
+    class MobileSafari(BaseBrowser):
+        def open(self, url, new=0, autoraise=True):
+            # This code is the equivalent of:
+            #   NSURL *nsurl = [NSURL URLWithString:url];
+            #   [[UIApplication sharedApplication] openURL:nsurl];
+            from ctypes import cdll, c_void_p, c_char_p, c_uint32
+            from ctypes import util
+            objc = cdll.LoadLibrary(util.find_library(b'objc'))
+            cf = cdll.LoadLibrary(util.find_library(b'CoreFoundation'))
+            objc.objc_getClass.restype = c_void_p
+            objc.objc_getClass.argtypes = [c_char_p]
+            objc.sel_registerName.restype = c_void_p
+            objc.sel_registerName.argtypes = [c_char_p]
+            cf.CFStringCreateWithCString.restype = c_void_p
+            cf.CFStringCreateWithCString.argtypes = [c_void_p, c_char_p, c_uint32]
+
+            # Get an NSString describing the URL
+            kCFStringEncodingUTF8 = 0x08000100
+            url = c_void_p(cf.CFStringCreateWithCString(None, url.encode('utf-8'), kCFStringEncodingUTF8))
+            autorelease = c_void_p(objc.sel_registerName(b'autorelease'))
+            objc.objc_msgSend.argtypes = [c_void_p, c_void_p]
+            objc.objc_msgSend.restype = c_void_p
+            objc.objc_msgSend(url, autorelease)
+
+            # Get an NSURL object representing the URL
+            NSURL = c_void_p(objc.objc_getClass(b'NSURL'))
+            urlWithString_ = c_void_p(objc.sel_registerName(b'URLWithString:'))
+            objc.objc_msgSend.restype = c_void_p
+            objc.objc_msgSend.argtypes = [c_void_p, c_void_p, c_void_p]
+            nsurl = c_void_p(objc.objc_msgSend(NSURL, urlWithString_, url))
+
+            # Get the shared UIApplication instance
+            UIApplication = c_void_p(objc.objc_getClass(b'UIApplication'))
+            sharedApplication = c_void_p(objc.sel_registerName(b'sharedApplication'))
+            objc.objc_msgSend.argtypes = [c_void_p, c_void_p]
+            objc.objc_msgSend.restype = c_void_p
+            shared_app = c_void_p(objc.objc_msgSend(UIApplication, sharedApplication))
+
+            # Open the URL on the shared application
+            openURL_ = c_void_p(objc.sel_registerName(b'openURL:'))
+            objc.objc_msgSend.argtypes = [c_void_p, c_void_p, c_void_p]
+            objc.objc_msgSend.restype = None
+            objc.objc_msgSend(shared_app, openURL_, nsurl)
+
+            return True
+
+    register("mobilesafari", None, MobileSafari(), preferred=True)
 
 #
 # Platform support for Windows

@@ -294,6 +294,9 @@ def _get_path(userbase):
 
     if sys.platform == 'darwin' and sys._framework:
         return f'{userbase}/lib/python/site-packages'
+    elif sys.platform in ('xros', 'ios', 'tvos', 'watchos'):
+        from sysconfig import get_path
+        return get_path('purelib', sys.platform)
 
     return f'{userbase}/lib/python{version[0]}.{version[1]}/site-packages'
 
