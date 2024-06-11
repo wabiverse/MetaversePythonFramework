@@ -13,9 +13,6 @@ PyAPI_FUNC(int) PyTraceBack_Print(PyObject *, PyObject *);
 PyAPI_DATA(PyTypeObject) PyTraceBack_Type;
 #define PyTraceBack_Check(v) Py_IS_TYPE(v, &PyTraceBack_Type)
 
-#ifdef __cplusplus
-}
-#endif
 
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_TRACEBACK_H
@@ -23,4 +20,7 @@ PyAPI_DATA(PyTypeObject) PyTraceBack_Type;
 #  undef Py_CPYTHON_TRACEBACK_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_TRACEBACK_H */

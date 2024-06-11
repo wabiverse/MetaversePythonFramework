@@ -597,9 +597,9 @@ def register_standard_browsers():
     # what to do if _tryorder is now empty?
 
 #
-# Platform support for iOS
+# Platform support for xrOS and iOS
 #
-if sys.platform == 'ios' or sys.platform == 'xros':
+if sys.platform in ('xros', 'ios'):
     class MobileSafari(BaseBrowser):
         def open(self, url, new=0, autoraise=True):
             # This code is the equivalent of:

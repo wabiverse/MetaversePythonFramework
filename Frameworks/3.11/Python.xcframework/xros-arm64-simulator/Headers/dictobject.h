@@ -84,9 +84,6 @@ PyAPI_DATA(PyTypeObject) PyDictRevIterKey_Type;
 PyAPI_DATA(PyTypeObject) PyDictRevIterItem_Type;
 PyAPI_DATA(PyTypeObject) PyDictRevIterValue_Type;
 
-#ifdef __cplusplus
-}
-#endif
 
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_DICTOBJECT_H
@@ -94,4 +91,7 @@ PyAPI_DATA(PyTypeObject) PyDictRevIterValue_Type;
 #  undef Py_CPYTHON_DICTOBJECT_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_DICTOBJECT_H */

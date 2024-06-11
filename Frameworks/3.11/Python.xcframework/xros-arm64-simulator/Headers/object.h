@@ -752,19 +752,12 @@ it carefully, it may save lots of calls to Py_INCREF() and Py_DECREF() at
 times.
 */
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_OBJECT_H
 #  include "cpython/object.h"
 #  undef Py_CPYTHON_OBJECT_H
 #endif
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 static inline int
 PyType_HasFeature(PyTypeObject *type, unsigned long feature)

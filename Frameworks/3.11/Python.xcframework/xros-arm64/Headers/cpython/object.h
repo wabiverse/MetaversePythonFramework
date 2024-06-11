@@ -1,9 +1,6 @@
 #ifndef Py_CPYTHON_OBJECT_H
 #  error "this header file must not be included directly"
 #endif
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 PyAPI_FUNC(void) _Py_NewReference(PyObject *op);
 
@@ -512,7 +509,3 @@ Py_DEPRECATED(3.11) typedef int UsingDeprecatedTrashcanMacro;
 #define Py_TRASHCAN_SAFE_END(op) \
         Py_TRASHCAN_END; \
     } while(0);
-
-#ifdef __cplusplus
-}
-#endif

@@ -13,14 +13,13 @@ extern "C" {
 /* This doesn't need to match anything */
 #define Py_fstring_input 800
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_COMPILE_H
 #  include "cpython/compile.h"
 #  undef Py_CPYTHON_COMPILE_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_COMPILE_H */

@@ -9,71 +9,69 @@ build_time_vars = {'ABIFLAGS': '',
  'ANDROID_API_LEVEL': 0,
  'AR': 'apple-xros1.0-simulator-ar',
  'ARFLAGS': 'rcs',
- 'BASECFLAGS': '-Wsign-compare -Wunreachable-code',
+ 'BASECFLAGS': '-fno-strict-aliasing',
  'BASECPPFLAGS': '',
  'BASEMODLIBS': '',
- 'BINDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/bin',
- 'BINLIBDEST': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
+ 'BINDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/bin',
+ 'BINLIBDEST': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
  'BLDLIBRARY': 'libpython3.11.a',
- 'BLDSHARED': 'arm64-apple-xros1.0-simulator-gcc -dynamiclib -undefined '
-              'dynamic_lookup',
+ 'BLDSHARED': 'arm64-apple-xros1.0-simulator-clang -dynamiclib -undefined '
+              'dynamic_lookup -mios-version-min=1.0',
  'BOOTSTRAP_HEADERS': '\\',
  'BUILDEXE': '.exe',
  'BUILDPYTHON': 'python.exe',
- 'BUILD_GNU_TYPE': 'arm64-apple-darwin',
+ 'BUILD_GNU_TYPE': 'aarch64-apple-darwin',
  'BYTESTR_DEPS': '\\',
- 'CC': 'arm64-apple-xros1.0-simulator-gcc',
+ 'CC': 'arm64-apple-xros1.0-simulator-clang',
  'CCSHARED': '',
- 'CFLAGS': '-Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall ',
+ 'CFLAGS': '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O3 -Wall '
+           '-mios-version-min=1.0',
  'CFLAGSFORSHARED': '',
  'CFLAGS_ALIASING': '-fno-strict-aliasing',
  'CFLAGS_NODIST': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': '',
- 'CONFIGURE_CFLAGS_NODIST': '-std=c11 -Wextra -Wno-unused-parameter '
-                            '-Wno-missing-field-initializers '
-                            '-Wstrict-prototypes '
-                            '-Werror=implicit-function-declaration '
+ 'CONFIGURE_CFLAGS': '-mios-version-min=1.0',
+ 'CONFIGURE_CFLAGS_NODIST': '-std=c11 -Werror=implicit-function-declaration '
                             '-fvisibility=hidden',
  'CONFIGURE_CPPFLAGS': '',
- 'CONFIGURE_LDFLAGS': '',
+ 'CONFIGURE_LDFLAGS': '-mios-version-min=1.0',
  'CONFIGURE_LDFLAGS_NODIST': '',
  'CONFIGURE_LDFLAGS_NOLTO': '',
  'CONFIG_ARGS': "'AR=apple-xros1.0-simulator-ar' "
-                "'CC=arm64-apple-xros1.0-simulator-gcc' "
+                "'CC=arm64-apple-xros1.0-simulator-clang' "
                 "'CPP=arm64-apple-xros1.0-simulator-cpp' "
-                "'CXX=arm64-apple-xros1.0-simulator-gcc' "
-                "'CFLAGS=' "
-                "'LDFLAGS=' "
-                "'LIBLZMA_CFLAGS=-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/xz-5.4.4/include' "
-                "'LIBLZMA_LIBS=-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/xz-5.4.4/lib "
+                "'CXX=arm64-apple-xros1.0-simulator-clang' "
+                "'CFLAGS=-mios-version-min=1.0' "
+                "'LDFLAGS=-mios-version-min=1.0' "
+                "'LIBLZMA_CFLAGS=-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/xz-5.4.4-1/include' "
+                "'LIBLZMA_LIBS=-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/xz-5.4.4-1/lib "
                 "-llzma' "
-                "'BZIP2_CFLAGS=-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/bzip2-1.0.8/include' "
-                "'BZIP2_LIBS=-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/bzip2-1.0.8/lib "
+                "'BZIP2_CFLAGS=-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/bzip2-1.0.8-1/include' "
+                "'BZIP2_LIBS=-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/bzip2-1.0.8-1/lib "
                 "-lbz2' "
-                "'LIBFFI_INCLUDEDIR=/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/libffi-3.4.4/include' "
-                "'LIBFFI_LIBDIR=/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/libffi-3.4.4/lib' "
+                "'LIBFFI_INCLUDEDIR=/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/libffi-3.4.4-1/include' "
+                "'LIBFFI_LIBDIR=/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/libffi-3.4.4-1/lib' "
                 "'LIBFFI_LIB=ffi' '--host=arm64-apple-xros1.0-simulator' "
                 "'--build=arm64-apple-darwin' "
-                "'--with-build-python=/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11' "
-                "'--prefix=/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6' "
+                "'--with-build-python=/opt/homebrew/bin/python3.11' "
+                "'--prefix=/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6' "
                 "'--enable-ipv6' "
-                "'--with-openssl=/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2' "
+                "'--with-openssl=/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1' "
                 "'--without-ensurepip' 'ac_cv_file__dev_ptmx=no' "
                 "'ac_cv_file__dev_ptc=no' 'build_alias=arm64-apple-darwin' "
                 "'host_alias=arm64-apple-xros1.0-simulator'",
- 'CONFINCLUDEDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include',
- 'CONFINCLUDEPY': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
+ 'CONFINCLUDEDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include',
+ 'CONFINCLUDEPY': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
  'COREPYTHONPATH': '',
- 'COVERAGE_INFO': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6/coverage.info',
+ 'COVERAGE_INFO': '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6/coverage.info',
  'COVERAGE_LCOV_OPTIONS': '--rc lcov_branch_coverage=1',
- 'COVERAGE_REPORT': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6/lcov-report',
+ 'COVERAGE_REPORT': '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--rc lcov_branch_coverage=1 --branch-coverage '
                             '--title "CPython 3.11 LCOV report [commit $(shell '
                             ')]"',
  'CPPFLAGS': '-I. -I./Include',
- 'CXX': 'arm64-apple-xros1.0-simulator-gcc',
+ 'CXX': 'arm64-apple-xros1.0-simulator-clang',
  'DECIMAL_CFLAGS': '-I./Modules/_decimal/libmpdec -DCONFIG_64=1 -DANSI=1 '
                    '-DHAVE_UINT128_T=1',
  'DECIMAL_LDFLAGS': '-lm Modules/_decimal/libmpdec/libmpdec.a',
@@ -81,13 +79,13 @@ build_time_vars = {'ABIFLAGS': '',
  'DEEPFREEZE_DEPS': './Tools/scripts/deepfreeze.py '
                     './Programs/_freeze_module.py \\',
  'DEEPFREEZE_OBJS': 'Python/deepfreeze/deepfreeze.o',
- 'DESTDIRS': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6 '
-             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib '
-             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11 '
-             '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/lib-dynload',
- 'DESTLIB': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
+ 'DESTDIRS': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6 '
+             '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib '
+             '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11 '
+             '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/lib-dynload',
+ 'DESTLIB': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
  'DESTPATH': '',
- 'DESTSHARED': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/lib-dynload',
+ 'DESTSHARED': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
  'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
@@ -118,9 +116,8 @@ build_time_vars = {'ABIFLAGS': '',
  'EXT_SUFFIX': '.cpython-311-xrsimulator.dylib',
  'FILEMODE': 644,
  'FLOAT_WORDS_BIGENDIAN': 0,
- 'FREEZE_MODULE': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11 '
-                  './Programs/_freeze_module.py',
- 'FREEZE_MODULE_BOOTSTRAP': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11 '
+ 'FREEZE_MODULE': '/opt/homebrew/bin/python3.11 ./Programs/_freeze_module.py',
+ 'FREEZE_MODULE_BOOTSTRAP': '/opt/homebrew/bin/python3.11 '
                             './Programs/_freeze_module.py',
  'FREEZE_MODULE_BOOTSTRAP_DEPS': './Programs/_freeze_module.py',
  'FREEZE_MODULE_DEPS': './Programs/_freeze_module.py',
@@ -374,9 +371,9 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_MEMRCHR': 0,
  'HAVE_MKDIRAT': 1,
  'HAVE_MKFIFO': 1,
- 'HAVE_MKFIFOAT': 0,
+ 'HAVE_MKFIFOAT': 1,
  'HAVE_MKNOD': 1,
- 'HAVE_MKNODAT': 0,
+ 'HAVE_MKNODAT': 1,
  'HAVE_MKTIME': 1,
  'HAVE_MMAP': 1,
  'HAVE_MREMAP': 0,
@@ -608,16 +605,16 @@ build_time_vars = {'ABIFLAGS': '',
  'HAVE_WORKING_TZSET': 0,
  'HAVE_WRITEV': 1,
  'HAVE_ZLIB_COPY': 1,
- 'HAVE_ZLIB_H': 0,
+ 'HAVE_ZLIB_H': 1,
  'HAVE__GETPTY': 0,
  'HOSTRUNNER': '',
  'HOST_GNU_TYPE': 'aarch64-apple-xros1.0-simulator',
- 'INCLDIRSTOMAKE': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include '
-                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include '
-                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11 '
-                   '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
- 'INCLUDEDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include',
- 'INCLUDEPY': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
+ 'INCLDIRSTOMAKE': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include '
+                   '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include '
+                   '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11 '
+                   '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
+ 'INCLUDEDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include',
+ 'INCLUDEPY': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/include/python3.11',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
@@ -626,45 +623,41 @@ build_time_vars = {'ABIFLAGS': '',
  'INSTSONAME': 'libpython3.11.a',
  'IO_H': 'Modules/_io/_iomodule.h',
  'IO_OBJS': '\\',
- 'LDCXXSHARED': 'arm64-apple-xros1.0-simulator-gcc -dynamiclib -undefined '
+ 'LDCXXSHARED': 'arm64-apple-xros1.0-simulator-clang -dynamiclib -undefined '
                 'dynamic_lookup',
- 'LDFLAGS': '',
+ 'LDFLAGS': '-mios-version-min=1.0',
  'LDFLAGS_NODIST': '',
  'LDLIBRARY': 'libpython3.11.a',
  'LDLIBRARYDIR': '',
- 'LDSHARED': 'arm64-apple-xros1.0-simulator-gcc -dynamiclib -undefined '
-             'dynamic_lookup',
+ 'LDSHARED': 'arm64-apple-xros1.0-simulator-clang -dynamiclib -undefined '
+             'dynamic_lookup -mios-version-min=1.0',
  'LDVERSION': '3.11',
  'LIBC': '',
- 'LIBDEST': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
- 'LIBDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib',
+ 'LIBDEST': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
+ 'LIBDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib',
  'LIBEXPAT_A': 'Modules/expat/libexpat.a',
- 'LIBEXPAT_CFLAGS': '-I./Modules/expat -Wsign-compare -Wunreachable-code '
-                    '-DNDEBUG -g -fwrapv -O3 -Wall '
-                    '-std=c11 -Wextra -Wno-unused-parameter '
-                    '-Wno-missing-field-initializers -Wstrict-prototypes '
+ 'LIBEXPAT_CFLAGS': '-I./Modules/expat -fno-strict-aliasing -DNDEBUG -g '
+                    '-fwrapv -O3 -Wall -mios-version-min=1.0 -std=c11 '
                     '-Werror=implicit-function-declaration '
                     '-fvisibility=hidden  -I./Include/internal -I. -I./Include',
  'LIBEXPAT_HEADERS': '\\',
  'LIBEXPAT_OBJS': '\\',
- 'LIBFFI_INCLUDEDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/libffi-3.4.4/include',
+ 'LIBFFI_INCLUDEDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/libffi-3.4.4-1/include',
  'LIBFFI_LIB': 'ffi',
- 'LIBFFI_LIBDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/libffi-3.4.4/lib',
+ 'LIBFFI_LIBDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/libffi-3.4.4-1/lib',
  'LIBM': '-lm',
  'LIBMPDEC_A': 'Modules/_decimal/libmpdec/libmpdec.a',
  'LIBMPDEC_CFLAGS': '-I./Modules/_decimal/libmpdec -DCONFIG_64=1 -DANSI=1 '
-                    '-DHAVE_UINT128_T=1 -Wsign-compare -Wunreachable-code '
-                    '-DNDEBUG -g -fwrapv -O3 -Wall '
-                    '-std=c11 -Wextra -Wno-unused-parameter '
-                    '-Wno-missing-field-initializers -Wstrict-prototypes '
+                    '-DHAVE_UINT128_T=1 -fno-strict-aliasing -DNDEBUG -g '
+                    '-fwrapv -O3 -Wall -mios-version-min=1.0 -std=c11 '
                     '-Werror=implicit-function-declaration '
                     '-fvisibility=hidden  -I./Include/internal -I. -I./Include',
  'LIBMPDEC_HEADERS': '\\',
  'LIBMPDEC_OBJS': '\\',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/pkgconfig',
- 'LIBPL': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/config-3.11-xrsimulator-arm64',
+ 'LIBPC': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/pkgconfig',
+ 'LIBPL': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/config-3.11-xrsimulator-arm64',
  'LIBPYTHON': '',
  'LIBRARY': 'libpython3.11.a',
  'LIBRARY_DEPS': 'libpython3.11.a',
@@ -672,26 +665,26 @@ build_time_vars = {'ABIFLAGS': '',
  'LIBRARY_OBJS_OMIT_FROZEN': '\\',
  'LIBS': '-ldl  -lpthread',
  'LIBSUBDIRS': 'asyncio \\',
- 'LINKCC': 'arm64-apple-xros1.0-simulator-gcc',
+ 'LINKCC': 'arm64-apple-xros1.0-simulator-clang',
  'LINKFORSHARED': '',
  'LINK_PYTHON_DEPS': 'libpython3.11.a',
  'LINK_PYTHON_OBJS': '\\',
  'LIPO_32BIT_FLAGS': '',
  'LIPO_INTEL64_FLAGS': '',
- 'LLVM_PROF_ERR': 'no',
- 'LLVM_PROF_FILE': '',
- 'LLVM_PROF_MERGER': 'true',
+ 'LLVM_PROF_ERR': 'yes',
+ 'LLVM_PROF_FILE': 'LLVM_PROFILE_FILE="code-%p.profclangr"',
+ 'LLVM_PROF_MERGER': "'' merge -output=code.profclangd *.profclangr",
  'LN': 'ln',
  'LOCALMODLIBS': '',
  'MACHDEP': 'xros',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
+ 'MACHDESTLIB': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11',
  'MACOSX_DEPLOYMENT_TARGET': '',
- 'MAINCC': 'arm64-apple-xros1.0-simulator-gcc',
+ 'MAINCC': 'arm64-apple-xros1.0-simulator-clang',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
  'MAKESETUP': './Modules/makesetup',
- 'MANDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/share/man',
+ 'MANDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/share/man',
  'MKDIR_P': './install-sh -c -d',
  'MODBUILT_NAMES': 'atexit  faulthandler  posix  _signal  _tracemalloc  '
                    '_codecs  _collections  errno  _io  itertools  _sre  '
@@ -778,8 +771,8 @@ build_time_vars = {'ABIFLAGS': '',
                         './Modules/_blake2/blake2module.h ./Modules/hashlib.h',
  'MODULE__BLAKE2_LDFLAGS': '',
  'MODULE__BLAKE2_STATE': 'yes',
- 'MODULE__BZ2_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/bzip2-1.0.8/include',
- 'MODULE__BZ2_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/bzip2-1.0.8/lib '
+ 'MODULE__BZ2_CFLAGS': '-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/bzip2-1.0.8-1/include',
+ 'MODULE__BZ2_LDFLAGS': '-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/bzip2-1.0.8-1/lib '
                         '-lbz2',
  'MODULE__BZ2_STATE': 'yes',
  'MODULE__CODECS_CN_STATE': 'yes',
@@ -811,9 +804,9 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__ELEMENTTREE_STATE': 'yes',
  'MODULE__FUNCTOOLS_LDFLAGS': '',
  'MODULE__GDBM_STATE': 'n/a',
- 'MODULE__HASHLIB_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/include',
+ 'MODULE__HASHLIB_CFLAGS': '-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/include',
  'MODULE__HASHLIB_DEPS': './Modules/hashlib.h',
- 'MODULE__HASHLIB_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/lib   '
+ 'MODULE__HASHLIB_LDFLAGS': '-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/lib   '
                             '-lcrypto',
  'MODULE__HASHLIB_STATE': 'yes',
  'MODULE__HEAPQ_STATE': 'yes',
@@ -824,8 +817,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__JSON_STATE': 'yes',
  'MODULE__LOCALE_LDFLAGS': '',
  'MODULE__LSPROF_STATE': 'yes',
- 'MODULE__LZMA_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/xz-5.4.4/include',
- 'MODULE__LZMA_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/xz-5.4.4/lib '
+ 'MODULE__LZMA_CFLAGS': '-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/xz-5.4.4-1/include',
+ 'MODULE__LZMA_LDFLAGS': '-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/xz-5.4.4-1/lib '
                          '-llzma',
  'MODULE__LZMA_STATE': 'yes',
  'MODULE__MD5_DEPS': './Modules/hashlib.h',
@@ -863,12 +856,12 @@ build_time_vars = {'ABIFLAGS': '',
  'MODULE__SQLITE3_LDFLAGS': '-lsqlite3',
  'MODULE__SQLITE3_STATE': 'yes',
  'MODULE__SRE_LDFLAGS': '',
- 'MODULE__SSL_CFLAGS': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/include',
+ 'MODULE__SSL_CFLAGS': '-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/include',
  'MODULE__SSL_DEPS': './Modules/_ssl.h ./Modules/_ssl/cert.c '
                      './Modules/_ssl/debughelpers.c ./Modules/_ssl/misc.c '
                      './Modules/_ssl_data.h ./Modules/_ssl_data_111.h '
                      './Modules/_ssl_data_300.h ./Modules/socketmodule.h',
- 'MODULE__SSL_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/lib  '
+ 'MODULE__SSL_LDFLAGS': '-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/lib  '
                         '-lssl -lcrypto',
  'MODULE__SSL_STATE': 'yes',
  'MODULE__STATISTICS_LDFLAGS': '-lm',
@@ -899,8 +892,8 @@ build_time_vars = {'ABIFLAGS': '',
  'MVWDELCH_IS_EXPRESSION': 0,
  'NO_AS_NEEDED': '-Wl,--no-as-needed',
  'OBJECT_OBJS': '\\',
- 'OPENSSL_INCLUDES': '-I/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/include',
- 'OPENSSL_LDFLAGS': '-L/Users/runner/work/Python-Apple-support/Python-Apple-support/merge/xrOS/xrsimulator/openssl-3.1.2/lib',
+ 'OPENSSL_INCLUDES': '-I/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/include',
+ 'OPENSSL_LDFLAGS': '-L/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/openssl-3.0.12-1/lib',
  'OPENSSL_LIBS': '-lssl -lcrypto',
  'OPENSSL_RPATH': '',
  'OPT': '-DNDEBUG -g -fwrapv -O3 -Wall',
@@ -915,8 +908,8 @@ build_time_vars = {'ABIFLAGS': '',
  'PARSER_OBJS': '\\ \\ Parser/myreadline.o Parser/tokenizer.o',
  'PEGEN_HEADERS': '\\',
  'PEGEN_OBJS': '\\',
- 'PGO_PROF_GEN_FLAG': '-fprofile-generate',
- 'PGO_PROF_USE_FLAG': '-fprofile-use -fprofile-correction',
+ 'PGO_PROF_GEN_FLAG': '-fprofile-instr-generate',
+ 'PGO_PROF_USE_FLAG': '-fprofile-instr-use=code.profclangd',
  'PLATLIBDIR': 'lib',
  'POBJS': '\\',
  'POSIX_SEMAPHORES_NOT_ENABLED': 0,
@@ -932,54 +925,46 @@ build_time_vars = {'ABIFLAGS': '',
  'PYTHONFRAMEWORKINSTALLDIR': '',
  'PYTHONFRAMEWORKPREFIX': '',
  'PYTHONPATH': '',
- 'PYTHON_FOR_BUILD': '_PYTHON_PROJECT_BASE=/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6 '
+ 'PYTHON_FOR_BUILD': '_PYTHON_PROJECT_BASE=/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6 '
                      '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                      'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-                     '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
+                     '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
                      'pybuilddir.txt`:)./Lib '
                      '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__xros_xrsimulator-arm64 '
-                     '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11',
+                     '/opt/homebrew/bin/python3.11',
  'PYTHON_FOR_BUILD_DEPS': '',
- 'PYTHON_FOR_FREEZE': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11',
+ 'PYTHON_FOR_FREEZE': '/opt/homebrew/bin/python3.11',
  'PYTHON_FOR_REGEN': '',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_BUILTIN_HASHLIB_HASHES': '"md5,sha1,sha256,sha512,sha3,blake2"',
- 'PY_BUILTIN_MODULE_CFLAGS': '-Wsign-compare -Wunreachable-code -DNDEBUG -g '
-                             '-fwrapv -O3 -Wall '
-                             '-std=c11 -Wextra -Wno-unused-parameter '
-                             '-Wno-missing-field-initializers '
-                             '-Wstrict-prototypes '
+ 'PY_BUILTIN_MODULE_CFLAGS': '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O3 '
+                             '-Wall -mios-version-min=1.0 -std=c11 '
                              '-Werror=implicit-function-declaration '
                              '-fvisibility=hidden  -I./Include/internal -I. '
                              '-I./Include -DPy_BUILD_CORE_BUILTIN',
- 'PY_CFLAGS': '-Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall ',
- 'PY_CFLAGS_NODIST': '-std=c11 -Wextra -Wno-unused-parameter '
-                     '-Wno-missing-field-initializers -Wstrict-prototypes '
-                     '-Werror=implicit-function-declaration '
+ 'PY_CFLAGS': '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O3 -Wall '
+              '-mios-version-min=1.0',
+ 'PY_CFLAGS_NODIST': '-std=c11 -Werror=implicit-function-declaration '
                      '-fvisibility=hidden  -I./Include/internal',
  'PY_COERCE_C_LOCALE': 1,
- 'PY_CORE_CFLAGS': '-Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 '
-                   '-Wall -std=c11 -Wextra '
-                   '-Wno-unused-parameter -Wno-missing-field-initializers '
-                   '-Wstrict-prototypes -Werror=implicit-function-declaration '
-                   '-fvisibility=hidden  -I./Include/internal -I. -I./Include '
-                   '-DPy_BUILD_CORE',
- 'PY_CORE_LDFLAGS': '',
+ 'PY_CORE_CFLAGS': '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O3 -Wall '
+                   '-mios-version-min=1.0 -std=c11 '
+                   '-Werror=implicit-function-declaration -fvisibility=hidden  '
+                   '-I./Include/internal -I. -I./Include -DPy_BUILD_CORE',
+ 'PY_CORE_LDFLAGS': '-mios-version-min=1.0',
  'PY_CPPFLAGS': '-I. -I./Include',
  'PY_ENABLE_SHARED': 0,
  'PY_FORMAT_SIZE_T': '"z"',
- 'PY_LDFLAGS': '',
+ 'PY_LDFLAGS': '-mios-version-min=1.0',
  'PY_LDFLAGS_NODIST': '',
- 'PY_LDFLAGS_NOLTO': '',
+ 'PY_LDFLAGS_NOLTO': '-mios-version-min=1.0',
  'PY_SQLITE_ENABLE_LOAD_EXTENSION': 0,
  'PY_SQLITE_HAVE_SERIALIZE': 1,
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
- 'PY_STDMODULE_CFLAGS': '-Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv '
-                        '-O3 -Wall -std=c11 -Wextra '
-                        '-Wno-unused-parameter -Wno-missing-field-initializers '
-                        '-Wstrict-prototypes '
+ 'PY_STDMODULE_CFLAGS': '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O3 -Wall '
+                        '-mios-version-min=1.0 -std=c11 '
                         '-Werror=implicit-function-declaration '
                         '-fvisibility=hidden  -I./Include/internal -I. '
                         '-I./Include',
@@ -994,7 +979,7 @@ build_time_vars = {'ABIFLAGS': '',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
  'RUNSHARED': '',
- 'SCRIPTDIR': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib',
+ 'SCRIPTDIR': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib',
  'SETPGRP_HAVE_ARG': 0,
  'SHELL': '/bin/sh',
  'SHLIBS': '-ldl  -lpthread',
@@ -1037,22 +1022,21 @@ build_time_vars = {'ABIFLAGS': '',
  'SYS_SELECT_WITH_SYS_TIME': 1,
  'TESTOPTS': '',
  'TESTPATH': '',
- 'TESTPYTHON': '_PYTHON_PROJECT_BASE=/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6 '
+ 'TESTPYTHON': '_PYTHON_PROJECT_BASE=/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6 '
                '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-               '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
+               '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
                'pybuilddir.txt`:)./Lib '
                '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__xros_xrsimulator-arm64 '
-               '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11',
+               '/opt/homebrew/bin/python3.11',
  'TESTPYTHONOPTS': '',
- 'TESTRUNNER': '_PYTHON_PROJECT_BASE=/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6 '
+ 'TESTRUNNER': '_PYTHON_PROJECT_BASE=/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6 '
                '_PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) '
                'PYTHONPATH=$(shell test -f pybuilddir.txt && echo '
-               '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
+               '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6/`cat '
                'pybuilddir.txt`:)./Lib '
                '_PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata__xros_xrsimulator-arm64 '
-               '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/macOS/macosx/python-3.11.6/bin/python3.11 '
-               './Tools/scripts/run_tests.py',
+               '/opt/homebrew/bin/python3.11 ./Tools/scripts/run_tests.py',
  'TESTSUBDIRS': 'ctypes/test \\',
  'TESTTIMEOUT': 1200,
  'TEST_MODULES': 'yes',
@@ -1066,8 +1050,8 @@ build_time_vars = {'ABIFLAGS': '',
  'UPDATE_FILE': './Tools/scripts/update_file.py',
  'USE_COMPUTED_GOTOS': 0,
  'VERSION': '3.11',
- 'WASM_ASSETS_DIR': './Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6',
- 'WASM_STDLIB': './Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/os.py',
+ 'WASM_ASSETS_DIR': './Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6',
+ 'WASM_STDLIB': './Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/lib/python3.11/os.py',
  'WHEEL_PKG_DIR': '',
  'WINDOW_HAS_FLAGS': 0,
  'WITH_DECIMAL_CONTEXTVAR': 1,
@@ -1082,9 +1066,9 @@ build_time_vars = {'ABIFLAGS': '',
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6',
- 'abs_srcdir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/build/xrOS/xrsimulator.arm64/python-3.11.6',
- 'datarootdir': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6/share',
- 'exec_prefix': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6',
- 'prefix': '/Users/runner/work/Python-Apple-support/Python-Apple-support/install/xrOS/xrsimulator.arm64/python-3.11.6',
+ 'abs_builddir': '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6',
+ 'abs_srcdir': '/Users/furby/Wabi/MetaversePythonFramework/build/xrOS/xrsimulator.arm64/python-3.11.6',
+ 'datarootdir': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6/share',
+ 'exec_prefix': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6',
+ 'prefix': '/Users/furby/Wabi/MetaversePythonFramework/install/xrOS/xrsimulator.arm64/python-3.11.6',
  'srcdir': '.'}

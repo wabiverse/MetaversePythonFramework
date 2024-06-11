@@ -1,9 +1,6 @@
 #ifndef Py_CPYTHON_COMPLEXOBJECT_H
 #  error "this header file must not be included directly"
 #endif
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 typedef struct {
     double real;
@@ -45,7 +42,3 @@ extern int _PyComplex_FormatAdvancedWriter(
     Py_ssize_t start,
     Py_ssize_t end);
 #endif  // Py_BUILD_CORE
-
-#ifdef __cplusplus
-}
-#endif

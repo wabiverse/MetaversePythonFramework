@@ -2,10 +2,6 @@
 #  error "this header file must not be included directly"
 #endif
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define _PyObject_SIZE(typeobj) ( (typeobj)->tp_basicsize )
 
 /* _PyObject_VAR_SIZE returns the number of bytes (as size_t) allocated for a
@@ -91,7 +87,3 @@ PyAPI_FUNC(int) PyObject_IS_GC(PyObject *obj);
 PyAPI_FUNC(int) PyType_SUPPORTS_WEAKREFS(PyTypeObject *type);
 
 PyAPI_FUNC(PyObject **) PyObject_GET_WEAKREFS_LISTPTR(PyObject *op);
-
-#ifdef __cplusplus
-}
-#endif

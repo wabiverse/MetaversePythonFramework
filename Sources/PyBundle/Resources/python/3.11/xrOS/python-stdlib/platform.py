@@ -462,8 +462,8 @@ def iOS_ver():
 def is_simulator():
     """Determine if the current platform is a device simulator.
 
-    Only useful when working with xrOS, iOS, tvOS or watchOS,
-    because Apple provides simulator platforms for those devices.
+    Only useful when working with xrOS, iOS, tvOS or watchOS, because
+    Apple provides simulator platforms for those devices.
 
     If the platform is actual hardware, returns False. Will also
     return False for device *emulators*, which are indistinguishable
@@ -770,9 +770,14 @@ class _Processor:
             csid, cpu_number = vms_lib.getsyi('SYI$_CPU', 0)
             return 'Alpha' if cpu_number >= 128 else 'VAX'
 
-    # On iOS, tvOS and watchOS, os.uname returns the architecture
+    # On xrOS, iOS, tvOS and watchOS, os.uname returns the architecture
     # as uname.machine. On device it doesn't; but there's only
     # on CPU architecture on device
+    def get_xros():
+        if getattr(sys.implementation, "_simulator", False):
+            return os.uname().machine
+        return 'arm64'
+
     def get_ios():
         if getattr(sys.implementation, "_simulator", False):
             return os.uname().machine

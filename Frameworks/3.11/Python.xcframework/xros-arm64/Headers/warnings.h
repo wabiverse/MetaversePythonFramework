@@ -32,15 +32,14 @@ PyAPI_FUNC(int) PyErr_WarnExplicit(
     const char *module,         /* UTF-8 encoded string */
     PyObject *registry);
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_WARNINGS_H
 #  include "cpython/warnings.h"
 #  undef Py_CPYTHON_WARNINGS_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_WARNINGS_H */
 

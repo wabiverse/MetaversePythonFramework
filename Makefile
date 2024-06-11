@@ -63,8 +63,8 @@ CFLAGS-watchOS=-mwatchos-version-min=$(VERSION_MIN-watchOS)
 PYTHON_CONFIGURE-watchOS=ac_cv_func_sigaltstack=no
 
 # The architecture of the machine doing the build
-HOST_ARCH=$(pwsh -Command uname -m)
-HOST_PYTHON=$(pwsh -Command which python$(PYTHON_VER))
+HOST_ARCH=arm64
+HOST_PYTHON=/opt/homebrew/bin/python3.11
 
 # Force the path to be minimal. This ensures that anything in the user environment
 # (in particular, homebrew and user-provided Python installs) aren't inadvertently

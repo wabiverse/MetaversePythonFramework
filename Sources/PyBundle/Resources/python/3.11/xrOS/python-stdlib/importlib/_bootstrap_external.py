@@ -1805,7 +1805,7 @@ def _install(_bootstrap_module):
     supported_loaders = _get_supported_file_loaders()
     sys.path_hooks.extend([FileFinder.path_hook(*supported_loaders)])
     sys.meta_path.append(PathFinder)
-    if sys.platform in {"ios", "tvos", "watchos"}:
+    if sys.platform in {"xros", "ios", "tvos", "watchos"}:
         frameworks_folder = _path_join(_path_split(sys.executable)[0], "Frameworks")
         _bootstrap._verbose_message('Adding Apple Framework dylib finder at {}', frameworks_folder)
         sys.meta_path.append(AppleFrameworkFinder(frameworks_folder))

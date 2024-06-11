@@ -2,10 +2,6 @@
 #  error "this header file must not be included directly"
 #endif
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 PyAPI_FUNC(int) PyErr_WarnExplicitObject(
     PyObject *category,
     PyObject *message,
@@ -22,7 +18,3 @@ PyAPI_FUNC(int) PyErr_WarnExplicitFormat(
 
 // DEPRECATED: Use PyErr_WarnEx() instead.
 #define PyErr_Warn(category, msg) PyErr_WarnEx(category, msg, 1)
-
-#ifdef __cplusplus
-}
-#endif

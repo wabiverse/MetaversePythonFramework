@@ -2,10 +2,6 @@
 #  error "this header file must not be included directly"
 #endif
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 typedef struct {
     PyObject_HEAD
     double ob_fval;
@@ -23,7 +19,3 @@ PyAPI_FUNC(int) PyFloat_Pack8(double x, char *p, int le);
 PyAPI_FUNC(double) PyFloat_Unpack2(const char *p, int le);
 PyAPI_FUNC(double) PyFloat_Unpack4(const char *p, int le);
 PyAPI_FUNC(double) PyFloat_Unpack8(const char *p, int le);
-
-#ifdef __cplusplus
-}
-#endif

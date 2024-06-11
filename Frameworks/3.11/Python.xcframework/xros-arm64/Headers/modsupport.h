@@ -1,14 +1,13 @@
 
 #ifndef Py_MODSUPPORT_H
 #define Py_MODSUPPORT_H
-
-#include <stdarg.h>               // va_list
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Module support interface */
+
+#include <stdarg.h>               // va_list
 
 /* If PY_SSIZE_T_CLEAN is defined, each functions treats #-specifier
    to mean Py_ssize_t */
@@ -159,14 +158,13 @@ PyAPI_FUNC(PyObject *) PyModule_FromDefAndSpec2(PyModuleDef *def,
 
 #endif /* New in 3.5 */
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_MODSUPPORT_H
 #  include "cpython/modsupport.h"
 #  undef Py_CPYTHON_MODSUPPORT_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_MODSUPPORT_H */

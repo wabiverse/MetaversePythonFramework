@@ -42,14 +42,13 @@ PyAPI_FUNC(PyObject*) PyFloat_FromDouble(double);
    speed. */
 PyAPI_FUNC(double) PyFloat_AsDouble(PyObject*);
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_FLOATOBJECT_H
 #  include "cpython/floatobject.h"
 #  undef Py_CPYTHON_FLOATOBJECT_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_FLOATOBJECT_H */

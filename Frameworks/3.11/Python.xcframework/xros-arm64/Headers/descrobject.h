@@ -32,14 +32,13 @@ PyAPI_FUNC(PyObject *) PyDescr_NewGetSet(PyTypeObject *, PyGetSetDef *);
 PyAPI_FUNC(PyObject *) PyDictProxy_New(PyObject *);
 PyAPI_FUNC(PyObject *) PyWrapper_New(PyObject *, PyObject *);
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_DESCROBJECT_H
 #  include "cpython/descrobject.h"
 #  undef Py_CPYTHON_DESCROBJECT_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_DESCROBJECT_H */

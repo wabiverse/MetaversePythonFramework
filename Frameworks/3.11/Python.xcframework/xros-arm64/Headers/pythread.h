@@ -121,14 +121,13 @@ PyAPI_FUNC(int) PyThread_tss_set(Py_tss_t *key, void *value);
 PyAPI_FUNC(void *) PyThread_tss_get(Py_tss_t *key);
 #endif  /* New in 3.7 */
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_PYTHREAD_H
 #  include "cpython/pythread.h"
 #  undef Py_CPYTHON_PYTHREAD_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_PYTHREAD_H */

@@ -1,9 +1,6 @@
 #ifndef Py_CPYTHON_DESCROBJECT_H
 #  error "this header file must not be included directly"
 #endif
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 typedef PyObject *(*wrapperfunc)(PyObject *self, PyObject *args,
                                  void *wrapped);
@@ -65,7 +62,3 @@ PyAPI_DATA(PyTypeObject) _PyMethodWrapper_Type;
 PyAPI_FUNC(PyObject *) PyDescr_NewWrapper(PyTypeObject *,
                                                 struct wrapperbase *, void *);
 PyAPI_FUNC(int) PyDescr_IsData(PyObject *);
-
-#ifdef __cplusplus
-}
-#endif

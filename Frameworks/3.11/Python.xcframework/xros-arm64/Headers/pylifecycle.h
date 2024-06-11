@@ -66,14 +66,13 @@ PyAPI_FUNC(PyOS_sighandler_t) PyOS_setsig(int, PyOS_sighandler_t);
 PyAPI_DATA(const unsigned long) Py_Version;
 #endif
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_PYLIFECYCLE_H
 #  include "cpython/pylifecycle.h"
 #  undef Py_CPYTHON_PYLIFECYCLE_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_PYLIFECYCLE_H */

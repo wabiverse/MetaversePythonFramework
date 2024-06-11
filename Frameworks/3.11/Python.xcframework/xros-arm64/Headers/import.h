@@ -86,14 +86,13 @@ PyAPI_FUNC(int) PyImport_AppendInittab(
     PyObject* (*initfunc)(void)
     );
 
-#ifdef __cplusplus
-}
-#endif
-
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_IMPORT_H
 #  include "cpython/import.h"
 #  undef Py_CPYTHON_IMPORT_H
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* !Py_IMPORT_H */

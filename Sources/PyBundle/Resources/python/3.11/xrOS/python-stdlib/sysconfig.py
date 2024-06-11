@@ -319,7 +319,7 @@ def _get_preferred_schemes():
             'home': 'posix_home',
             'user': 'nt_user',
         }
-    if sys.platform in ('xros', 'ios', 'tvos', 'watchos'):
+    if sys.platform in ('ios', 'tvos', 'watchos'):
         return {
             'prefix': sys.platform,
             'home': sys.platform,
@@ -831,7 +831,7 @@ def get_platform():
         if m:
             release = m.group()
     elif osname[:6] == "darwin":
-        if sys.platform in ("xros", "ios", "tvos", "watchos"):
+        if sys.platform in ("ios", "tvos", "watchos"):
             import _ios_support
             _, release, _ = _ios_support.get_platform_ios()
             osname = sys.platform
