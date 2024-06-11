@@ -40,13 +40,14 @@ PyAPI_FUNC(int) PyList_Sort(PyObject *);
 PyAPI_FUNC(int) PyList_Reverse(PyObject *);
 PyAPI_FUNC(PyObject *) PyList_AsTuple(PyObject *);
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_LISTOBJECT_H
 #  include "cpython/listobject.h"
 #  undef Py_CPYTHON_LISTOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_LISTOBJECT_H */

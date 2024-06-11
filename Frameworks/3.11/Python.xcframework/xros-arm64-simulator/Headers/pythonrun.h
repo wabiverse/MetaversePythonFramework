@@ -33,13 +33,14 @@ PyAPI_DATA(int) (*PyOS_InputHook)(void);
 PyAPI_FUNC(int) PyOS_CheckStack(void);
 #endif
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_PYTHONRUN_H
 #  include "cpython/pythonrun.h"
 #  undef Py_CPYTHON_PYTHONRUN_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_PYTHONRUN_H */

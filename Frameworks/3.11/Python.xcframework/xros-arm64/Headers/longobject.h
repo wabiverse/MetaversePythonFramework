@@ -79,13 +79,14 @@ PyAPI_FUNC(PyObject *) PyLong_FromString(const char *, char **, int);
 PyAPI_FUNC(unsigned long) PyOS_strtoul(const char *, char **, int);
 PyAPI_FUNC(long) PyOS_strtol(const char *, char **, int);
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_LONGOBJECT_H
 #  include "cpython/longobject.h"
 #  undef Py_CPYTHON_LONGOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_LONGOBJECT_H */

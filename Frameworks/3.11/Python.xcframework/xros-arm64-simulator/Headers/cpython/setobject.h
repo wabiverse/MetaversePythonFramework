@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* There are three kinds of entries in the table:
 
 1. Unused:  key == NULL and hash == 0
@@ -65,3 +69,7 @@ PyAPI_DATA(PyObject *) _PySet_Dummy;
 
 PyAPI_FUNC(int) _PySet_NextEntry(PyObject *set, Py_ssize_t *pos, PyObject **key, Py_hash_t *hash);
 PyAPI_FUNC(int) _PySet_Update(PyObject *set, PyObject *iterable);
+
+#ifdef __cplusplus
+}
+#endif

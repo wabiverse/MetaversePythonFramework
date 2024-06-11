@@ -1,6 +1,9 @@
 #ifndef Py_CPYTHON_ABSTRACTOBJECT_H
 #  error "this header file must not be included directly"
 #endif
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* === Object Protocol ================================================== */
 
@@ -217,3 +220,7 @@ PyAPI_FUNC(int) _Py_convert_optional_to_ssize_t(PyObject *, void *);
 
 /* Same as PyNumber_Index but can return an instance of a subclass of int. */
 PyAPI_FUNC(PyObject *) _PyNumber_Index(PyObject *o);
+
+#ifdef __cplusplus
+}
+#endif

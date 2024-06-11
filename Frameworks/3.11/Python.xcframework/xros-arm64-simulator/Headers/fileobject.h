@@ -37,13 +37,14 @@ PyAPI_DATA(int) Py_UTF8Mode;
     #define _PyIsSelectable_fd(FD) ((unsigned int)(FD) < (unsigned int)FD_SETSIZE)
 #endif
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_FILEOBJECT_H
 #  include "cpython/fileobject.h"
 #  undef Py_CPYTHON_FILEOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_FILEOBJECT_H */

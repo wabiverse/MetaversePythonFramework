@@ -29,6 +29,9 @@ PyAPI_FUNC(PyObject *) PyWeakref_NewProxy(PyObject *ob,
                                           PyObject *callback);
 PyAPI_FUNC(PyObject *) PyWeakref_GetObject(PyObject *ref);
 
+#ifdef __cplusplus
+}
+#endif
 
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_WEAKREFOBJECT_H
@@ -36,7 +39,4 @@ PyAPI_FUNC(PyObject *) PyWeakref_GetObject(PyObject *ref);
 #  undef Py_CPYTHON_WEAKREFOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_WEAKREFOBJECT_H */

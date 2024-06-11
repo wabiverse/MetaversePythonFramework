@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* Error objects */
 
 /* PyException_HEAD defines the initial segment of every exception class. */
@@ -177,3 +181,7 @@ PyAPI_FUNC(void) _Py_NO_RETURN _Py_FatalErrorFormat(
     ...);
 
 #define Py_FatalError(message) _Py_FatalErrorFunc(__func__, message)
+
+#ifdef __cplusplus
+}
+#endif

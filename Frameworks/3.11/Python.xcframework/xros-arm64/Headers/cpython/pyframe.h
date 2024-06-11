@@ -1,6 +1,9 @@
 #ifndef Py_CPYTHON_PYFRAME_H
 #  error "this header file must not be included directly"
 #endif
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 PyAPI_DATA(PyTypeObject) PyFrame_Type;
 
@@ -15,3 +18,6 @@ PyAPI_FUNC(PyObject *) PyFrame_GetBuiltins(PyFrameObject *frame);
 PyAPI_FUNC(PyObject *) PyFrame_GetGenerator(PyFrameObject *frame);
 PyAPI_FUNC(int) PyFrame_GetLasti(PyFrameObject *frame);
 
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,9 @@
 #ifndef Py_CPYTHON_COMPILE_H
 #  error "this header file must not be included directly"
 #endif
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* Public interface */
 #define PyCF_MASK (CO_FUTURE_DIVISION | CO_FUTURE_ABSOLUTE_IMPORT | \
@@ -52,3 +55,7 @@ typedef struct {
 #define PY_INVALID_STACK_EFFECT INT_MAX
 PyAPI_FUNC(int) PyCompile_OpcodeStackEffect(int opcode, int oparg);
 PyAPI_FUNC(int) PyCompile_OpcodeStackEffectWithJump(int opcode, int oparg, int jump);
+
+#ifdef __cplusplus
+}
+#endif

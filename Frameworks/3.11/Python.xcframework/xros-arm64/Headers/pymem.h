@@ -90,15 +90,14 @@ PyAPI_FUNC(void) PyMem_Free(void *ptr);
 #define PyMem_Del                 PyMem_Free
 #define PyMem_DEL                 PyMem_Free
 
+#ifdef __cplusplus
+}
+#endif
 
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_PYMEM_H
 #  include "cpython/pymem.h"
 #  undef Py_CPYTHON_PYMEM_H
-#endif
-
-#ifdef __cplusplus
-}
 #endif
 
 #endif /* !Py_PYMEM_H */

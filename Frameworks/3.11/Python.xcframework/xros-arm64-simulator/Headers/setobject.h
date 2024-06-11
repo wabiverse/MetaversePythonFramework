@@ -37,13 +37,14 @@ PyAPI_FUNC(Py_ssize_t) PySet_Size(PyObject *anyset);
     (Py_IS_TYPE(ob, &PySet_Type) || \
     PyType_IsSubtype(Py_TYPE(ob), &PySet_Type))
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_SETOBJECT_H
 #  include "cpython/setobject.h"
 #  undef Py_CPYTHON_SETOBJECT_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_SETOBJECT_H */

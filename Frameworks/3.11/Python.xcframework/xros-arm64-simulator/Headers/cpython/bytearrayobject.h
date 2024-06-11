@@ -1,6 +1,9 @@
 #ifndef Py_CPYTHON_BYTEARRAYOBJECT_H
 #  error "this header file must not be included directly"
 #endif
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* Object layout */
 typedef struct {
@@ -35,4 +38,8 @@ static inline Py_ssize_t PyByteArray_GET_SIZE(PyObject *op) {
 }
 #if !defined(Py_LIMITED_API) || Py_LIMITED_API+0 < 0x030b0000
 #  define PyByteArray_GET_SIZE(self) PyByteArray_GET_SIZE(_PyObject_CAST(self))
+#endif
+
+#ifdef __cplusplus
+}
 #endif

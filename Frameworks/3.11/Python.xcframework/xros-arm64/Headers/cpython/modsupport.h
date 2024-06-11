@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* If PY_SSIZE_T_CLEAN is defined, each functions treats #-specifier
    to mean Py_ssize_t */
 #ifdef PY_SSIZE_T_CLEAN
@@ -106,3 +110,7 @@ PyAPI_FUNC(PyObject *) _PyModule_CreateInitialized(PyModuleDef*, int apiver);
 PyAPI_FUNC(int) _PyModule_Add(PyObject *, const char *, PyObject *);
 
 PyAPI_DATA(const char *) _Py_PackageContext;
+
+#ifdef __cplusplus
+}
+#endif

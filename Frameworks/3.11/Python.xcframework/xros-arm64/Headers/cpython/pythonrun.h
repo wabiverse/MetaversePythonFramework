@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 PyAPI_FUNC(int) PyRun_SimpleStringFlags(const char *, PyCompilerFlags *);
 PyAPI_FUNC(int) _PyRun_SimpleFileObject(
     FILE *fp,
@@ -119,3 +123,7 @@ PyAPI_FUNC(PyObject *) PyRun_FileFlags(FILE *fp, const char *p, int s, PyObject 
 PyAPI_FUNC(char *) PyOS_Readline(FILE *, FILE *, const char *);
 PyAPI_DATA(PyThreadState*) _PyOS_ReadlineTState;
 PyAPI_DATA(char) *(*PyOS_ReadlineFunctionPointer)(FILE *, FILE *, const char *);
+
+#ifdef __cplusplus
+}
+#endif

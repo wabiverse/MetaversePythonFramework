@@ -1,6 +1,9 @@
 #ifndef Py_CPYTHON_BYTESOBJECT_H
 #  error "this header file must not be included directly"
 #endif
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct {
     PyObject_VAR_HEAD
@@ -131,3 +134,7 @@ PyAPI_FUNC(void*) _PyBytesWriter_WriteBytes(_PyBytesWriter *writer,
     void *str,
     const void *bytes,
     Py_ssize_t size);
+
+#ifdef __cplusplus
+}
+#endif

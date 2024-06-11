@@ -2,6 +2,10 @@
 #  error "this header file must not be included directly"
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 PyAPI_FUNC(int) _PyLong_AsInt(PyObject *);
 
 PyAPI_FUNC(int) _PyLong_UnsignedShort_Converter(PyObject *, void *);
@@ -93,3 +97,7 @@ PyAPI_FUNC(PyObject *) _PyLong_GCD(PyObject *, PyObject *);
 
 PyAPI_FUNC(PyObject *) _PyLong_Rshift(PyObject *, size_t);
 PyAPI_FUNC(PyObject *) _PyLong_Lshift(PyObject *, size_t);
+
+#ifdef __cplusplus
+}
+#endif

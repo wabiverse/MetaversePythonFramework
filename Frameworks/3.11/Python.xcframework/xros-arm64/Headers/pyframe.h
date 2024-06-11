@@ -14,13 +14,14 @@ PyAPI_FUNC(int) PyFrame_GetLineNumber(PyFrameObject *);
 
 PyAPI_FUNC(PyCodeObject *) PyFrame_GetCode(PyFrameObject *frame);
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_PYFRAME_H
 #  include "cpython/pyframe.h"
 #  undef Py_CPYTHON_PYFRAME_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_PYFRAME_H */

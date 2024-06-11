@@ -1,10 +1,11 @@
 #ifndef Py_ERRORS_H
 #define Py_ERRORS_H
+
+#include <stdarg.h>               // va_list
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <stdarg.h>               // va_list
 
 /* Error handling definitions */
 
@@ -319,13 +320,14 @@ PyAPI_FUNC(int) PyOS_snprintf(char *str, size_t size, const char  *format, ...)
 PyAPI_FUNC(int) PyOS_vsnprintf(char *str, size_t size, const char  *format, va_list va)
                         Py_GCC_ATTRIBUTE((format(printf, 3, 0)));
 
+#ifdef __cplusplus
+}
+#endif
+
 #ifndef Py_LIMITED_API
 #  define Py_CPYTHON_ERRORS_H
 #  include "cpython/pyerrors.h"
 #  undef Py_CPYTHON_ERRORS_H
 #endif
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* !Py_ERRORS_H */
